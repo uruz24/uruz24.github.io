@@ -27,7 +27,7 @@
     <!-- meta -->
 
 
-<title>Hello World | niu&#39;s blog</title>
+<title>vim终端编辑器 | niu&#39;s blog</title>
 
 
 
@@ -35,15 +35,15 @@
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 第一章内网">
+    <meta name="description" content="介绍：vim是vi的扩展，被誉为终端编辑器神器安装：yum install -y vim 工作模式：正常模式，插入模式，编辑模式正常模式：使用vim打开文件时的默认模式vim filename    打开文件，若文件不存在就新建文件esc：切换到正常模式shift + zz ：保存退出vim filename  +n： 打开文件，定位到第n行vim filename  +： 打开文件，定位到末尾g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://uruz24.github.io/2021/09/02/hello-world/index.html">
+<meta property="og:title" content="vim终端编辑器">
+<meta property="og:url" content="https://uruz24.github.io/2021/09/02/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/index.html">
 <meta property="og:site_name" content="niu&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 第一章内网">
+<meta property="og:description" content="介绍：vim是vi的扩展，被誉为终端编辑器神器安装：yum install -y vim 工作模式：正常模式，插入模式，编辑模式正常模式：使用vim打开文件时的默认模式vim filename    打开文件，若文件不存在就新建文件esc：切换到正常模式shift + zz ：保存退出vim filename  +n： 打开文件，定位到第n行vim filename  +： 打开文件，定位到末尾g">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-02T11:20:25.910Z">
-<meta property="article:modified_time" content="2021-09-02T11:56:44.084Z">
+<meta property="article:modified_time" content="2021-09-02T14:19:28.061Z">
 <meta property="article:author" content="Peter Niu">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -137,7 +137,7 @@
 
 <div class="post-title">
     <h1 class="post-title__text">
-        Hello World
+        vim终端编辑器
     </h1>
     <div class="post-title__meta">
         <a href="/archives/2021/09/" class="post-meta__date button">2021-09-02</a>
@@ -159,19 +159,13 @@
 <article class="post content-card">
     <div class="post__header"></div>
     <div class="post__content">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="内网渗透"><a href="#内网渗透" class="headerlink" title="内网渗透"></a>内网渗透</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="介绍：vim是vi的扩展，被誉为终端编辑器神器"><a href="#介绍：vim是vi的扩展，被誉为终端编辑器神器" class="headerlink" title="介绍：vim是vi的扩展，被誉为终端编辑器神器"></a>介绍：vim是vi的扩展，被誉为终端编辑器神器</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><p><code>yum install -y vim</code></p>
+<h4 id="工作模式：正常模式，插入模式，编辑模式"><a href="#工作模式：正常模式，插入模式，编辑模式" class="headerlink" title="工作模式：正常模式，插入模式，编辑模式"></a>工作模式：正常模式，插入模式，编辑模式</h4><h4 id="正常模式：使用vim打开文件时的默认模式"><a href="#正常模式：使用vim打开文件时的默认模式" class="headerlink" title="正常模式：使用vim打开文件时的默认模式"></a>正常模式：使用vim打开文件时的默认模式</h4><p>vim filename    打开文件，若文件不存在就新建文件<br>esc：切换到正常模式<br>shift + zz ：保存退出<br>vim filename  +n： 打开文件，定位到第n行<br>vim filename  +： 打开文件，定位到末尾<br>gg：        定位到首行<br>G：        定位到尾行<br>ngg：    定位到第n行<br>^：        定位到行首<br>$：        定位到行尾<br>yy：        复制光标所在行<br>p：        粘贴<br>nyy：    复制光标开始的n行<br>dd：        删除光标所在行<br>ndd：    删除光标开始的n行<br>u：        撤销操作<br>ctrl + r:    反撤销操作</p>
+<h4 id="插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入："><a href="#插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入：" class="headerlink" title="插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入："></a>插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入：</h4><p>i：在光标处输入<br>I：在行首插入<br>a：在光标下一个字符处插入<br>A：在行位插入<br>o：在光标下一行插入一行空行<br>O：在光标上一行插入一行空行<br>s：删除光标所在字符并插入<br>S：删除光标所在行并插入</p>
+<h4 id="编辑模式：是对整个文件进行的操作，如：保存、退出"><a href="#编辑模式：是对整个文件进行的操作，如：保存、退出" class="headerlink" title="编辑模式：是对整个文件进行的操作，如：保存、退出"></a>编辑模式：是对整个文件进行的操作，如：保存、退出</h4><p>：w        保存<br>：q        退出<br>：q！    强制退出<br>：wq        保存退出，等价于shift+zz<br>：x        保存退出，等价于wq<br>：set nu    显示行号<br>：set nonu    隐藏行号<br>：行号    定位到指定行号<br>/内容        查找指定内容，n下翻，N上翻<br>：%s/原内容/新内容        使用新内容替换原内容，全部替换<br>：m,ns/原内容/新内容    使用新内容替换原内容，替换m行到n行</p>
+<p>友情提示：若非正常关闭vim，则会生成临时文件（隐藏的），需要删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
     </div>
      
