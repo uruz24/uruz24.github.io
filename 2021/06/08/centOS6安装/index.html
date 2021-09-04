@@ -27,7 +27,7 @@
     <!-- meta -->
 
 
-<title>Archive | niu&#39;s blog</title>
+<title>centOS6安装 | niu&#39;s blog</title>
 
 
 
@@ -35,11 +35,15 @@
 
     <!-- OpenGraph -->
  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="niu&#39;s blog">
-<meta property="og:url" content="https://uruz24.github.io/archives/index.html">
+    <meta name="description" content="&amp;#x5B89;&amp;#x88C5;centOS61.&amp;#x67E5;&amp;#x770B;ip&amp;#xFF0C;&amp;#x8FDB;&amp;#x5230;&amp;#x7F51;&amp;#x5361;&amp;#x6587;&amp;#x4EF6;&amp;#x5939; ip a    cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F; ls vi ifcfg-eth0 2.&amp;#x66F4;&amp;#x6539;&amp;#x52A8;&amp;#x600">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centOS6安装">
+<meta property="og:url" content="https://uruz24.github.io/2021/06/08/centOS6%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="niu&#39;s blog">
+<meta property="og:description" content="&amp;#x5B89;&amp;#x88C5;centOS61.&amp;#x67E5;&amp;#x770B;ip&amp;#xFF0C;&amp;#x8FDB;&amp;#x5230;&amp;#x7F51;&amp;#x5361;&amp;#x6587;&amp;#x4EF6;&amp;#x5939; ip a    cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F; ls vi ifcfg-eth0 2.&amp;#x66F4;&amp;#x6539;&amp;#x52A8;&amp;#x600">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-08T08:52:17.000Z">
+<meta property="article:modified_time" content="2021-09-04T08:53:48.747Z">
 <meta property="article:author" content="Peter Niu">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -49,6 +53,13 @@
  
 
     
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none">
+        
+    
+
     
     
 
@@ -121,137 +132,108 @@
 </header>
 
 
-    <div class="cover">
-        <div class="cover__logo">
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        centOS6安装
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2021/06/" class="post-meta__date button">2021-06-08</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h2 id="&#x5B89;&#x88C5;centOS6"><a href="#&#x5B89;&#x88C5;centOS6" class="headerlink" title="&#x5B89;&#x88C5;centOS6"></a>&#x5B89;&#x88C5;centOS6</h2><p>1.&#x67E5;&#x770B;ip&#xFF0C;&#x8FDB;&#x5230;&#x7F51;&#x5361;&#x6587;&#x4EF6;&#x5939;</p>
+<p><code>ip a</code>   </p>
+<p><code>cd /etc/sysconfig/network-scripts/</code></p>
+<p><code>ls</code></p>
+<p><code>vi ifcfg-eth0</code></p>
+<p>2.&#x66F4;&#x6539;&#x52A8;&#x6001;IPdhcp&#x4E3A;&#x9759;&#x6001;static</p>
+<p>BOOTRPROTO=dhcp</p>
+<p>3.</p>
+<p>BOOTRPROTO=static</p>
+<p>4.&#x6DFB;&#x52A0;&#x9759;&#x6001;ip&#xFF0C;&#x5B50;&#x7F51;&#x63A9;&#x7801;&#xFF0C;&#x7F51;&#x5173;</p>
+<p>IPADDR=192.168.24.171</p>
+<p>NETMASK=255.255.255.0</p>
+<p>GATEWAY=192.168.24.1</p>
+<p>:wq&#x4FDD;&#x5B58;&#x9000;&#x51FA;</p>
+<p>5.</p>
+<p><code>if down eth0</code>  &#x5173;&#x95ED;&#x7F51;&#x5361;</p>
+<p><code>ifup eth0</code>   &#x6253;&#x5F00;&#x7F51;&#x5361;</p>
+<p>ip a   &#x67E5;&#x770B;ip&#xFF0C;&#x5982;&#x679C;&#x663E;&#x793A;&#xFF0C;&#x8868;&#x793A;&#x9759;&#x6001;ip&#x8BBE;&#x7F6E;&#x6210;&#x529F;</p>
+<p><code>ping 8.8.8.8</code>   pingGoogle</p>
+<p>6.&#x7528;&#x672C;&#x673A;ping&#x865A;&#x62DF;&#x673A;&#x7684;&#x9759;&#x6001;ip&#xFF0C;</p>
+<p><code>ping 192.168.24.171</code></p>
+<p>7.&#x8FDE;&#x63A5;&#x865A;&#x62DF;&#x673A;&#xFF0C;ip a &#x663E;&#x793A;&#x5185;&#x5BB9;&#xFF0C;&#x8868;&#x793A;&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#x4E0A;&#x865A;&#x62DF;&#x673A;</p>
+<p>&#x672C;&#x673A;</p>
+<p><code>ssh root@192.168.24.171</code></p>
+<p><code>ip a</code></p>
+<p>-&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;</p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2021-09-04</p></div> 
+    <div class="post-entry__tags"></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
             
-                <img no-lazy alt="author Image" class="cover__avatar" src="/img/assets/baozha.jpg">
+                <a href="/2021/09/02/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            vim终端编辑器
+                        </div>
+                    </div>
+                </a>
             
         </div>
-        
-        
-            <div class="cover__intro">
-                <p>勤学似春起之苗,不见其增,日有所长;辍学如磨刀之石,不见其损,日有所亏.</p>
- 
-            </div>
-        
+        <div class="nav__next">
+            
+                <a href="/2021/06/04/Linux%E5%91%BD%E4%BB%A4/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Linux命令基础
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
     </div>
 
-            
-<main class='main'>
-    
-        <div class="archives">
-            
-                    <div class="archives-item">
-                        <div class="archives-left">
-                            <div class="archives-icon icon-lg"></div>
-                        </div>
-                        <div class="archives-content">
-                            <h3 class="archives-year">2021</h3>
-                        </div>
-                    </div>
-                
-                <div class="archives-item">
-                    <div class="archives-left">
-                        <div class="archives-icon">
 
-                        </div>
-                    </div>
-                    <span class="archives-content">
-                        09-03
-                        &nbsp;
-                        <a href="/2021/09/03/lcx%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/">
-                            <span class="archives-title">
-                                
-                                    lcx端口转发getshell内网ip
-                                
-                            </span>
-                        </a>
-                        <br><br>
-                    </span>
-                </div>
-            
-                <div class="archives-item">
-                    <div class="archives-left">
-                        <div class="archives-icon">
 
-                        </div>
-                    </div>
-                    <span class="archives-content">
-                        09-02
-                        &nbsp;
-                        <a href="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/">
-                            <span class="archives-title">
-                                
-                                    oracle注入报错注入
-                                
-                            </span>
-                        </a>
-                        <br><br>
-                    </span>
-                </div>
-            
-                <div class="archives-item">
-                    <div class="archives-left">
-                        <div class="archives-icon">
 
-                        </div>
-                    </div>
-                    <span class="archives-content">
-                        09-02
-                        &nbsp;
-                        <a href="/2021/09/02/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/">
-                            <span class="archives-title">
-                                
-                                    vim终端编辑器
-                                
-                            </span>
-                        </a>
-                        <br><br>
-                    </span>
-                </div>
-            
-                <div class="archives-item">
-                    <div class="archives-left">
-                        <div class="archives-icon">
 
-                        </div>
-                    </div>
-                    <span class="archives-content">
-                        06-08
-                        &nbsp;
-                        <a href="/2021/06/08/centOS6%E5%AE%89%E8%A3%85/">
-                            <span class="archives-title">
-                                
-                                    centOS6安装
-                                
-                            </span>
-                        </a>
-                        <br><br>
-                    </span>
-                </div>
-            
-                <div class="archives-item">
-                    <div class="archives-left">
-                        <div class="archives-icon">
-
-                        </div>
-                    </div>
-                    <span class="archives-content">
-                        06-04
-                        &nbsp;
-                        <a href="/2021/06/04/Linux%E5%91%BD%E4%BB%A4/">
-                            <span class="archives-title">
-                                
-                                    Linux命令基础
-                                
-                            </span>
-                        </a>
-                        <br><br>
-                    </span>
-                </div>
-            
-        </div>
-    
 </main>
 
             <footer class="footer">

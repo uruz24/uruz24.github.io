@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+        <link rel="shortcut icon" href="/img/assets/0922.ico">
+    
+    
+    
+    
+    
+
+
+    <!-- meta -->
+
+
+<title>Linux命令基础 | niu&#39;s blog</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="Linux&amp;#x547D;&amp;#x4EE4;&amp;#x57FA;&amp;#x7840;&amp;#x5173;&amp;#x673A;&amp;#x547D;&amp;#x4EE4;&amp;#xFF1A;poweroff halt&amp;#xFF08;&amp;#x9700;&amp;#x8981;root&amp;#x6743;&amp;#x9650;&amp;#xFF09; reboot                              &amp;#x7ACB;&amp;#x523B;&amp;#x91">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令基础">
+<meta property="og:url" content="https://uruz24.github.io/2021/06/04/Linux%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="niu&#39;s blog">
+<meta property="og:description" content="Linux&amp;#x547D;&amp;#x4EE4;&amp;#x57FA;&amp;#x7840;&amp;#x5173;&amp;#x673A;&amp;#x547D;&amp;#x4EE4;&amp;#xFF1A;poweroff halt&amp;#xFF08;&amp;#x9700;&amp;#x8981;root&amp;#x6743;&amp;#x9650;&amp;#xFF09; reboot                              &amp;#x7ACB;&amp;#x523B;&amp;#x91">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://uruz24.github.io/2021/06/04/Linux%E5%91%BD%E4%BB%A4/data:,">
+<meta property="article:published_time" content="2021-06-04T08:55:49.000Z">
+<meta property="article:modified_time" content="2021-09-04T08:58:47.445Z">
+<meta property="article:author" content="Peter Niu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://uruz24.github.io/2021/06/04/Linux%E5%91%BD%E4%BB%A4/data:,">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none">
+        
+    
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/style/dark.css">
+
+    
+<script src="/js/darkmode.js"></script>
+
+
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">Niu&#39;s blog</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Linux命令基础
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2021/06/" class="post-meta__date button">2021-06-04</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h1 id="Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;"><a href="#Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;" class="headerlink" title="Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;"></a>Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;</h1><p>&#x5173;&#x673A;&#x547D;&#x4EE4;&#xFF1A;poweroff</p>
+<p>halt&#xFF08;&#x9700;&#x8981;root&#x6743;&#x9650;&#xFF09;</p>
+<p><code>reboot</code>                              &#x7ACB;&#x523B;&#x91CD;&#x542F;&#xFF1A;</p>
+<p><code>shutdown  -c</code>                   &#x53D6;&#x6D88;&#x524D;&#x4E00;&#x4E2A;&#x5173;&#x673A;&#x547D;&#x4EE4;</p>
+<p><code>shutdown  -h now</code>          &#x7ACB;&#x523B;&#x5173;&#x673A;</p>
+<p><code>shutdown  -h 10</code>             10&#x5206;&#x949F;&#x540E;&#x5173;&#x673A;</p>
+<p><code>shutdown  -h 11:11</code>       11:11&#x5173;&#x673A;</p>
+<p><code>shutdown  -r  now</code>         &#x7ACB;&#x523B;&#x91CD;&#x542F;</p>
+<p><code>shutdown  -r  10</code>            10&#x5206;&#x949F;&#x540E;&#x91CD;&#x542F;</p>
+<p><code>shutdown  -r  11:11</code>       11:11&#x91CD;&#x542F;</p>
+<p>init &#x547D;&#x4EE4;&#xFF1A;</p>
+<p>init 0      &#x5173;&#x673A;</p>
+<p>init 3      &#x7EAF;&#x6587;&#x672C;&#x6A21;&#x5F0F;</p>
+<p>init 5    &#x56FE;&#x5F62;&#x6A21;&#x5F0F;</p>
+<p>init 6    &#x91CD;&#x65B0;&#x542F;&#x52A8;</p>
+<p>pwd&#xFF1A;&#x67E5;&#x770B;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</p>
+<p>ls&#xFF1A;&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x7684;&#x5185;&#x5BB9;</p>
+<p>-l&#xFF1A;&#x5217;&#x8868;&#x663E;&#x793A;</p>
+<p>-a&#xFF1A;&#x663E;&#x793A;&#x5168;&#x90E8;&#xFF0C;&#x5305;&#x62EC;&#x9690;&#x85CF;&#x6587;&#x4EF6;</p>
+<p>-h&#xFF1A;&#x4EBA;&#x6027;&#x5316;&#x663E;&#x793A;</p>
+<p>-d&#xFF1A;&#x53EA;&#x663E;&#x793A;&#x76EE;&#x5F55;</p>
+<p>cd&#xFF1A;&#x5207;&#x597D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</p>
+<p>.    &#x5F53;&#x524D;&#x76EE;&#x5F55;</p>
+<p>..  &#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;</p>
+<p>~  &#x7528;&#x6237;&#x5BB6;&#x76EE;&#x5F55;</p>
+<p>-   &#x4E0A;&#x6B21;&#x5207;&#x8FC7;&#x6765;&#x7684;&#x76EE;&#x5F55;</p>
+<p><strong>&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF1A;</strong></p>
+<p>Linux&#x76EE;&#x5F55;&#x4E0E;win&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF0C;&#x662F;&#x4ECE;&#x201D; / &#x201C;&#x5F00;&#x59CB;&#xFF0C;&#x53EA;&#x6709;&#x5B83;&#x6CA1;&#x6709;&#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x56E0;&#x6B64;&#x53EB;&#x6839;&#x76EE;&#x5F55;</p>
+<p>&#x200B;    <img src="/2021/06/04/Linux%E5%91%BD%E4%BB%A4/data:," alt="0"></p>
+<p>&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF1A;</p>
+<p>/bin &#xFF1A;&#x5927;&#x90E8;&#x5206;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;</p>
+<p>/boot&#xFF1A;&#x542F;&#x52A8;&#x76F8;&#x5173;&#x76EE;&#x5F55;</p>
+<p>/dev&#xFF1A;&#x8BBE;&#x5907;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#xFF0C;Linux&#x4E0B;&#x4E00;&#x5207;&#x8BBE;&#x5907;&#x7686;&#x662F;&#x6587;&#x4EF6;</p>
+<p>/etc&#xFF1A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</p>
+<p>/home&#xFF1A;&#x666E;&#x901A;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</p>
+<p>/lib&#xFF1A;&#x5E93;&#x6587;&#x4EF6;</p>
+<p>/lib64&#xFF1A;64&#x4F4D;&#x7684;&#x5E93;&#x6587;&#x4EF6;</p>
+<p>/lost+found&#xFF1A;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;&#x65F6;&#x4E34;&#x65F6;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x4E8E;&#x6062;&#x590D;&#x7B49;&#x64CD;&#x4F5C;</p>
+<p>/media&#xFF1A;&#x5A92;&#x4F53;&#x76EE;&#x5F55;</p>
+<p>/mnt&#xFF1A;&#x6302;&#x8F7D;&#x76EE;&#x5F55;&#xFF0C;&#x901A;&#x7528;&#x6302;&#x8F7D;&#x70B9;</p>
+<p>/opt&#xFF1A;&#x5B89;&#x88C5;&#x7CFB;&#x7EDF;&#x975E;&#x5FC5;&#x987B;&#x8F6F;&#x4EF6;&#x76EE;&#x5F55;</p>
+<p>/proc&#xFF1A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F1A;&#x6620;&#x5C04;&#x786C;&#x4EF6;&#x4FE1;&#x606F;</p>
+<p>/root&#xFF1A;root&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;</p>
+<p>/sbin&#xFF1A;&#x8D85;&#x7EA7;&#x7528;&#x6237;&#x624D;&#x80FD;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</p>
+<p>/selinux&#xFF1A;Linux&#x4E0B;&#x7684;&#x4E00;&#x5957;&#x5F88;&#x590D;&#x6742;&#x5B89;&#x88C5;&#x673A;&#x5236;&#xFF0C;&#x901A;&#x5E38;&#x5173;&#x95ED;&#x4E0D;&#x7528;&#x3002;</p>
+<p>/srv&#xFF1A;&#x5B58;&#x653E;&#x672C;&#x673A;&#x6216;&#x8005;&#x672C;&#x673A;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6570;&#x636E;&#x6216;&#x670D;&#x52A1;</p>
+<p>/sys&#xFF1A;&#x7C7B;&#x4F3C;&#x4E8E;/proc&#xFF0C;&#x4E5F;&#x662F;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x6620;&#x5C04;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x3002;</p>
+<p>/tmp&#xFF1A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;</p>
+<p>/usr&#xFF1A;&#x5B58;&#x653E;&#x7528;&#x6237;&#x5B89;&#x88C5;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>/var&#xFF1A;&#x7CFB;&#x7EDF;&#x4EA7;&#x751F;&#x7684;&#x4E0D;&#x53EF;&#x81EA;&#x52A8;&#x9500;&#x6BC1;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#xFF1A;&#x65E5;&#x5FD7;&#x3001;&#x7F13;&#x5B58;&#x7B49;</p>
+<p>mkdir &#xFF1A;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</p>
+<p>touch&#xFF1A;&#x521B;&#x5EFA;&#x6587;&#x4EF6;</p>
+<p>ip a  /ip addr centos7&#x4E4B;&#x540E;&#xFF0C;&#x4F7F;&#x7528;ip&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x7F51;&#x5361;&#x4FE1;&#x606F;</p>
+<p>ifdown /ifup &#x7981;&#x7528;&#x7F51;&#x5361;/&#x542F;&#x52A8;&#x7F51;&#x5361; </p>
+<p>Linux&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x7F51;&#x7EDC;ip</p>
+<p>ping &#x7F51;&#x7EDC;&#x6D4B;&#x8BD5;  &#x5BF9;&#x76EE;&#x6807;&#x4E3B;&#x673A;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5305;</p>
+<p>ls</p>
+<p>cat   &#xFF08;&#x8BB0;&#x4E8B;&#x672C;&#x5DE5;&#x5177;&#xFF09;&#x4EE5;&#x6587;&#x672C;&#x7684;&#x6A21;&#x5F0F;&#x67E5;&#x770B;&#x6587;&#x4EF6;</p>
+<p>vi     &#x7F16;&#x8F91;&#x666E;&#x901A;&#x6587;&#x672C;</p>
+<p>/bin   bin&#x662F;binary&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x5B58;&#x653E;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x547D;&#x4EE4;</p>
+<p>ls  ./ =ls </p>
+<p>mk dir -p /etc/a/b/c/</p>
+<p>rmdir -p /etc/a/b/c/     &#x5220;&#x9664;&#x7A7A;&#x6587;&#x4EF6;&#x5939;</p>
+<p>touch a  &#x521B;&#x5EFA;&#x6587;&#x4EF6;a</p>
+<p>echo &gt;&gt; b</p>
+<p>echio &gt;a</p>
+<p>vi a</p>
+<p>mv /etc/ etcs &#x91CD;&#x547D;&#x540D;</p>
+<p>-&#x2014;&#x2014;&#x2014;&#x2013;</p>
+<p>&#x6587;&#x4EF6;&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<p>&#x589E;</p>
+<p>touch</p>
+<p>vi&#xFF1A;wq</p>
+<p>echo&gt;a.txt</p>
+<p>mkdir -p</p>
+<p>&#x5220;</p>
+<p>rmdir  // &#x53EA;&#x80FD;&#x5220;&#x9664;&#x7A7A;&#x6587;&#x4EF6;&#x5939;</p>
+<p>rm -rf // &#x8BEF;&#x5220;&#x9664;</p>
+<p>&#x67E5;</p>
+<p>pwd</p>
+<p>ls</p>
+<p>cat</p>
+<p>tac</p>
+<p>head  -n</p>
+<p>tail  -n   -f</p>
+<p>grep</p>
+<p>find</p>
+<p>more</p>
+<p>whereis</p>
+<p>which</p>
+<p>&#x6539;</p>
+<p>cd</p>
+<p>cp  -r</p>
+<p>cat /etc/passwd &gt; ./passwd</p>
+<p>vi :wq</p>
+<p>mv</p>
+<p>touch -t201605171210.20 test.txt &#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&#x3001;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;</p>
+<p>&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF1A;</p>
+<p>-    &#x4E0A;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;</p>
+<p>~   &#x7528;&#x6237;&#x4E3B;&#x76EE;&#x5F55;</p>
+<p>.     &#x5F53;&#x524D;&#x8DEF;&#x5F84;</p>
+<p>..     &#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;</p>
+<p>|      &#x7BA1;&#x9053;&#x7B26;&#xFF0C;&#x628A;&#x524D;&#x9762;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4F5C;&#x4E3A;&#x540E;&#x9762;&#x7684;&#x8F93;&#x5165;&#xFF0C;</p>
+<p>&#x200B;    ls  |  xargs rm -rf </p>
+<p>&gt;     &#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x76F4;&#x63A5;&#x8986;&#x76D6;&#x539F;&#x6709;&#x5185;&#x5BB9;</p>
+<p>&#x200B;    echo 123&gt;a.txt</p>
+<p>&gt;&gt;   &#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;</p>
+<p>&#x2018;&#x2019;    &#x4F18;&#x5148;&#x8FD0;&#x884C;&#x547D;&#x4EE4;</p>
+<p>&#x200B;    rm -rf &#x2018;ls&#x2019;</p>
+<p>&#x200B;    ping &#x2018;whoami&#x2019;.ceye.co</p>
+<p>$()  &#x53D8;&#x91CF;</p>
+<p>&#x200B;    rm -rf $(ls)</p>
+<p>-&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</p>
+<p> ping  dns &#x670D;&#x52A1;&#x5668;</p>
+<p> ping <code>whoami</code>312g4g.dnslog.cn</p>
+<p>-&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</p>
+<p>jobs</p>
+<p>ctrl z </p>
+<p>fg %1</p>
+<p>-&#x2014;&#x2014;&#x2014;&#x2014;-</p>
+<p>tar zcvf /root/network.tgz ./   &#x538B;&#x7F29;&#x6253;&#x5305;</p>
+<p>tar &#x6253;&#x5305;</p>
+<p>tar cvf a.tar ./*</p>
+<p>tar xvf a.tar </p>
+<p>tar zcvf b.tar.gz ./*</p>
+<p>tar zxvf b.tar.gz </p>
+<p>zxvf  &#x89E3;&#x538B; </p>
+<p>linux &#x4E0D;&#x9700;&#x8981;&#x540E;&#x7F00;&#x540D;</p>
+<p>-&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2013;</p>
+<p>vi</p>
+<p>i &#x8F93;&#x5165;</p>
+<p>esc&#x9000;&#x51FA;</p>
+<p>&#xFF1A;wq&#x4FDD;&#x5B58;&#x9000;&#x51FA;</p>
+<p>&#xFF1A;q! &#x5F3A;&#x5236;&#x9000;&#x51FA;</p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2021-09-04</p></div> 
+    <div class="post-entry__tags"></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2021/06/08/centOS6%E5%AE%89%E8%A3%85/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            centOS6安装
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+     
+    <a href="#" class="button" id="b2t" aria-label="Back to Top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2021 <a href="/">niu&#39;s blog</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>
