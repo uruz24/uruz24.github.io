@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://uruz24.github.io/2021/09/04/xss/</loc>
+    
+    <lastmod>2021-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://uruz24.github.io/2021/08/21/oracle/</loc>
+    
+    <lastmod>2021-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://uruz24.github.io/2021/09/03/lcx/</loc>
+    
+    <lastmod>2021-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://uruz24.github.io/2021/06/27/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    
+    <lastmod>2021-09-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://uruz24.github.io/2021/06/04/Linux%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2021-09-04</lastmod>
@@ -15,31 +43,10 @@
     
   </url>
   
-  <url>
-    <loc>https://uruz24.github.io/2021/09/03/lcx%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</loc>
-    
-    <lastmod>2021-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://uruz24.github.io/2021/09/02/oracle%E6%B3%A8%E5%85%A5%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/</loc>
-    
-    <lastmod>2021-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://uruz24.github.io/2021/09/02/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-    
-    <lastmod>2021-09-02</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://uruz24.github.io/</loc>
-    <lastmod>2021-09-04</lastmod>
+    <lastmod>2021-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
